@@ -3,11 +3,11 @@
   "email": "yerim609@gmail.com",
   "description": "",
   "image": {
-    "src": "../../images/favicon-dino.png",
+    "src": "../../images/me.jpeg",
     "alt": "Gatsby Logo"
   },
   "socialProfiles": {
-    "from": ["LinkedIn", "Medium", "Github", "Mail"],
+    "from": ["Github", "Mail"],
     "showIcons": true
   }
 }
