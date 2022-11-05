@@ -3,7 +3,7 @@
     "language": "en",
     "siteUrl": "https://gatsby-starter-portfolio-minimal-theme.netlify.app/",
     "title": "Gatsby Starter for Portfolio Minimal",
-    "titleTemplate": "%s · Yerim's blog",
+    "titleTemplate": "%s · About Yerim",
     "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
     "author": "Konstantin Münster",
     "avatar": "../content/images/gatsby.png",
@@ -17,24 +17,20 @@
     }
   },
   "siteConfiguration": {
-    "logo": { "text": "Portfolio" },
+    "logo": { "text": "Y_rim" },
     "navigation": {
       "header": [
         { "label": "About", "url": "/about" },
-        { "label": "Blog", "url": "/blog" },
-        { "label": "Project", "url": "/blog" },
-        { "label": "Study", "url": "/blog" },
-        { "label": "Features", "url": "/#features" }
+        { "label": "Diary", "url": "/diary" },
+        { "label": "Project", "url": "/project" },
+        { "label": "Study", "url": "/study" }
       ],
       "ctaButton": {
         "openNewTab": false,
         "label": "Contact",
         "url": "/contact"
       },
-      "footer": [
-        { "label": "Privacy", "url": "/privacy" },
-        { "label": "Imprint", "url": "/imprint" }
-      ]
+      "footer": []
     },
     "featureToggles": {
       "useDarkModeAsDefault": false,
