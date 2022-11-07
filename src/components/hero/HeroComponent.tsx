@@ -11,8 +11,6 @@ export function HeroSection(props: PageSection): React.ReactElement {
   const response = useLocalDataSource();
   const data = response.allHeroJson.sections[0];
 
-  const;
-
   return (
     <Animation type="fadeUp" delay={400}>
       <HeroStyled>
