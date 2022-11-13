@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { useLocalDataSource } from "./data";
 
 const AboutSection = () => {
+  const response = useLocalDataSource();
+  const data = response.allAboutJson.sections[0];
+
   return (
     <AboutStyled>
       {/* Profile */}
@@ -12,11 +16,11 @@ const AboutSection = () => {
 
           <div>
             <ul className="desc">
-              <li>이름 : 진예림</li>
-              <li>생년월일 : 1999.06.09 🐰</li>
-              <li>MBTI : ISFJ</li>
-              <li>취미 : 게임 🎮</li>
-              <li>자격증 : 컴퓨터활용능력 1급, 정보처리기사</li>
+              <li>이름 : {data.profile.name}</li>
+              <li>생년월일 : {data.profile.birthday}</li>
+              <li>MBTI : {data.profile.mbti}</li>
+              <li>취미 : {data.profile.hobby}</li>
+              <li>자격증 : {data.profile.cert}</li>
             </ul>
           </div>
         </div>
@@ -30,31 +34,15 @@ const AboutSection = () => {
             <div className="line" />
             <div className="time-line">
               <ul>
-                <li>
-                  <div className="circle" />
-                  <div className="date">2021.06.24 ~ 2021.08.18</div>
-                  <div className="desc">(주) 미래월드 인턴실습</div>
-                </li>
-                <li>
-                  <div className="circle" />
-                  <div className="date">2022.02.22</div>
-                  <div className="desc">영남대학교 컴퓨터공학과 수석 졸업</div>
-                </li>
-                <li>
-                  <div className="circle" />
-                  <div className="date">2022.04.01</div>
-                  <div className="desc">(주) 탑코 입사</div>
-                </li>
-                <li>
-                  <div className="circle" />
-                  <div className="date">2022.07.01</div>
-                  <div className="desc">(주) 탑코 정규직 전환</div>
-                </li>
-                <li>
-                  <div className="circle" />
-                  <div className="date">2022.10.29</div>
-                  <div className="desc">블로그 시작</div>
-                </li>
+                {data.timestamp.map((item, index) => {
+                  return (
+                    <li key={`timestamp-${index}`}>
+                      <div className="circle" />
+                      <div className="date">{item.date}</div>
+                      <div className="desc">{item.desc}</div>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
