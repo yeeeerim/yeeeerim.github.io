@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
+import { ImageObject } from "gatsby-theme-portfolio-minimal/src/types";
 
 interface AboutSectionQueryResult {
   allAboutJson: {
@@ -13,6 +14,7 @@ interface AboutSectionQueryResult {
       timestamp: {
         date: string;
         desc: string;
+        logo?: ImageObject;
       }[];
     }[];
   };
@@ -33,6 +35,14 @@ export const useLocalDataSource = (): AboutSectionQueryResult => {
           timestamp {
             date
             desc
+            logo {
+              src {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+              alt
+            }
           }
         }
       }

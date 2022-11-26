@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { useLocalDataSource } from "./data";
 
 const AboutSection = () => {
@@ -12,8 +13,7 @@ const AboutSection = () => {
       <div className="profile">
         <div className="title">🔗 Profile</div>
         <div className="content">
-          {/* <img width={500} height={500} src="" alt="profile-img" /> */}
-
+          <div className="circle" />
           <div>
             <ul className="desc">
               <li>이름 : {data.profile.name}</li>
@@ -35,11 +35,24 @@ const AboutSection = () => {
             <div className="time-line">
               <ul>
                 {data.timestamp.map((item, index) => {
+                  console.log(item);
+
                   return (
                     <li key={`timestamp-${index}`}>
                       <div className="circle" />
                       <div className="date">{item.date}</div>
                       <div className="desc">{item.desc}</div>
+                      <div className="logo">
+                        {item.logo && item.logo.src && (
+                          <GatsbyImage
+                            image={
+                              item.logo.src.childImageSharp.gatsbyImageData ||
+                              ""
+                            }
+                            alt={item.logo.alt || ""}
+                          />
+                        )}
+                      </div>
                     </li>
                   );
                 })}
@@ -60,13 +73,20 @@ const AboutStyled = styled.div`
   max-width: var(--page-width);
   margin: 0 auto;
   padding: var(--page-padding);
-  /* display: flex; */
   justify-content: space-between;
 
   /* profile */
   .profile {
     margin-bottom: 70px;
     .content {
+      display: flex;
+      margin: 30px 0;
+      .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #ddd;
+      }
       .desc {
         list-style: square;
       }
@@ -103,6 +123,9 @@ const AboutStyled = styled.div`
               }
               .date {
                 width: 300px;
+              }
+              .logo {
+                margin: 0 10px;
               }
             }
           }
