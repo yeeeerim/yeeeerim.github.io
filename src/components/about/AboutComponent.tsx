@@ -11,7 +11,7 @@ const AboutSection = () => {
     <AboutStyled>
       {/* Profile */}
       <div className="profile">
-        <div className="title">🔗 Profile</div>
+        <div className="title">Profile</div>
         <div className="content">
           <div className="circle" />
           <div>
@@ -28,7 +28,7 @@ const AboutSection = () => {
 
       {/* TimeStamp */}
       <div className="timestamp">
-        <div className="title">🔗 Timestamp</div>
+        <div className="title">Timestamp</div>
         <div className="content">
           <div className="graph">
             <div className="line" />
@@ -96,6 +96,7 @@ const AboutStyled = styled.div`
   /* timestamp */
   .timestamp {
     .content {
+      margin: 30px 0;
       .graph {
         position: relative;
         .line {
@@ -136,6 +137,10 @@ const AboutStyled = styled.div`
 
   /* common */
   .title {
+    border: 2px solid white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    display: inline;
     font-size: 1.5rem;
     font-weight: 600;
   }
