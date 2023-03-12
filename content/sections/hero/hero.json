@@ -16,7 +16,7 @@
   },
   "description": "안녕하세요. 프론트엔드 개발자 진예림입니다.",
   "socialProfiles": {
-    "from": ["LinkedIn", "Medium", "Github", "Mail"],
+    "from": ["Github", "Mail"],
     "showIcons": false
   }
 }
