@@ -101,7 +101,7 @@ const AboutStyled = styled.div`
         position: relative;
         .line {
           width: 3px;
-          height: 300px;
+          height: 350px;
           background-color: #fbfafa;
           margin: 20px 20px 20px 25px;
         }
