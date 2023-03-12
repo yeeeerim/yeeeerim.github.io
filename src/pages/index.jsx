@@ -15,7 +15,8 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="About Yerim" />
-      <Page useSplashScreenAnimation>
+      {/* <Page useSplashScreenAnimation> */}
+      <Page>
         <HeroSection sectionId="hero" />
         {/* <HeroSection sectionId="hero" /> */}
         {/* <ArticlesSection
