@@ -18,8 +18,12 @@
             "url": "https://github.com/TeamDogeC-2/StudentSoup"
           },
           {
-            "type": "external",
+            "type": "notion",
             "url": "https://yr1m.notion.site/SFOO-Student-Food-22d541c3e60045b8b002256196d71314"
+          },
+          {
+            "type": "external",
+            "url": "https://studentsoup.site/"
           }
         ]
       }
