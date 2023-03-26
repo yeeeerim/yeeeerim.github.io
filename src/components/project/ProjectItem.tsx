@@ -4,11 +4,12 @@ import { Animation } from "../Animation";
 import "./project.css";
 import { ImageObject } from "gatsby-theme-portfolio-minimal/src/types";
 import { useMediaQuery } from "gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery";
-import { Icon } from "gatsby-theme-portfolio-minimal/src/components/Icon";
+import { Icon } from "../Icon";
 
 enum LinkType {
   External = "external",
   Github = "github",
+  Notion = "notion",
 }
 
 export interface Project {

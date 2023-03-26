@@ -4,6 +4,7 @@ import { ImageObject } from "gatsby-theme-portfolio-minimal/src/types";
 enum LinkType {
   External = "external",
   Github = "github",
+  Notion = "notion",
 }
 
 export interface Project {
