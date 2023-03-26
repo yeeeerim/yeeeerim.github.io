@@ -1,48 +1,78 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Project } from "gatsby-theme-portfolio-minimal/src/components/Project";
+import { ImageObject } from "gatsby-theme-portfolio-minimal/src/types";
 
-interface ProjectsSectionQueryResult {
-  allProjectsJson: {
+enum LinkType {
+  External = "external",
+  Github = "github",
+}
+
+export interface Project {
+  category?: string;
+  title: string;
+  description: string;
+  image: ImageObject & { linkTo?: string };
+  tags?: string[];
+  links?: {
+    type: LinkType;
+    url: string;
+  }[];
+  visible: boolean;
+}
+
+interface ProjectSectionQueryResult {
+  allProjectJson: {
     sections: {
-      button: {
-        label: string;
-        url: string;
-        visible: boolean;
-      };
-      projects: Project[];
+      project: { team: Project[]; personal: Project[] };
     }[];
   };
 }
 
-export const useLocalDataSource = (): ProjectsSectionQueryResult => {
+export const useLocalDataSource = (): ProjectSectionQueryResult => {
   return useStaticQuery(graphql`
-    query ProjectsSectionQuery {
-      allProjectsJson {
+    query ProjectSectionQuery {
+      allProjectJson {
         sections: nodes {
-          button {
-            label
-            url
-            visible
-          }
-          projects {
-            category
-            description
-            image {
-              alt
-              linkTo
-              src {
-                childImageSharp {
-                  gatsbyImageData(width: 400)
+          project {
+            team {
+              category
+              description
+              image {
+                alt
+                linkTo
+                src {
+                  childImageSharp {
+                    gatsbyImageData(width: 400)
+                  }
                 }
               }
+              links {
+                type
+                url
+              }
+              tags
+              title
+              visible
             }
-            links {
-              type
-              url
+            personal {
+              category
+              description
+              image {
+                alt
+                linkTo
+                src {
+                  childImageSharp {
+                    gatsbyImageData(width: 400)
+                  }
+                }
+              }
+              links {
+                type
+                url
+              }
+              tags
+              title
+              visible
             }
-            tags
-            title
-            visible
           }
         }
       }

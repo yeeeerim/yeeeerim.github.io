@@ -1,11 +1,9 @@
 import styled from "@emotion/styled";
-import { ProjectsSection } from "gatsby-theme-portfolio-minimal/src/sections/Projects";
-import * as classes from "gatsby-theme-portfolio-minimal/src/sections/Projects/";
 import React, { useEffect, useState } from "react";
 import { useLocalDataSource } from "./data";
 import { Animation } from "gatsby-theme-portfolio-minimal/src/components/Animation";
 import { Slider } from "gatsby-theme-portfolio-minimal/src/components/Slider";
-import { Project } from "gatsby-theme-portfolio-minimal/src/components/Project";
+import { ProjectItem } from "./ProjectItem";
 
 export enum TabType {
   PERSONAL = 0,
@@ -14,24 +12,24 @@ export enum TabType {
 
 const ProjectSection = () => {
   const response = useLocalDataSource();
-  const data = response.allProjectsJson.sections[0];
+  const data = response.allProjectJson.sections[0];
 
-  const [selectTab, setSelectTab] = useState<number>(TabType.PERSONAL);
+  const [selectTab, setSelectTab] = useState<number>(TabType.TEAM);
 
   return (
     <ProjectStyled>
       <div className="tab-area">
         <button
-          className={selectTab === TabType.PERSONAL ? "focus" : ""}
-          onClick={(e) => setSelectTab(TabType.PERSONAL)}
-        >
-          Personal
-        </button>
-        <button
           className={selectTab === TabType.TEAM ? "focus" : ""}
           onClick={(e) => setSelectTab(TabType.TEAM)}
         >
           Team
+        </button>
+        <button
+          className={selectTab === TabType.PERSONAL ? "focus" : ""}
+          onClick={(e) => setSelectTab(TabType.PERSONAL)}
+        >
+          Personal
         </button>
       </div>
       {/* TODO */}
@@ -42,11 +40,17 @@ const ProjectSection = () => {
             flexDirection: "column",
           }}
         >
-          {data.projects.map((project, key) => {
-            return project.visible ? (
-              <Project key={key} index={key} data={project} />
-            ) : null;
-          })}
+          {selectTab === TabType.TEAM
+            ? data.project.team.map((p, key) => {
+                return p.visible ? (
+                  <ProjectItem key={key} index={key} data={p} />
+                ) : null;
+              })
+            : data.project.personal.map((p, key) => {
+                return p.visible ? (
+                  <ProjectItem key={key} index={key} data={p} />
+                ) : null;
+              })}
         </Slider>
       </Animation>
     </ProjectStyled>
