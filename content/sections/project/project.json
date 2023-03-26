@@ -3,23 +3,23 @@
     "team": [
       {
         "visible": true,
-        "category": "🕹️ EASY AND QUICK SETUP",
-        "title": "Add content and deploy!",
-        "description": "Get up and running within minutes. Just install the starter, add your content, deploy it, and there you go! This starter works seamlessly with hosts like Netlify. Photo by Clément H on Unsplash.",
-        "tags": ["Content Integration", "Ready-2-Deploy"],
+        "category": "🍔 6-contributor",
+        "title": "SFOO: Student Food",
+        "description": "대학 주변의 맛집을 추천해주는 사이트입니다. 음식점을 검색하고 리뷰를 작성할 수 있으며, 학교 및 학과별 게시판을 통해 정보를 교환할 수 있습니다.",
+        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
         "image": {
-          "src": "../../images/clement-h-95YRwf6CNw8-unsplash.jpg",
-          "alt": "Quick Setup",
-          "linkTo": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+          "src": "../../images/sfoo.png",
+          "alt": "sfoo_img",
+          "linkTo": "https://studentsoup.site/"
         },
         "links": [
           {
             "type": "github",
-            "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+            "url": "https://github.com/TeamDogeC-2/StudentSoup"
           },
           {
             "type": "external",
-            "url": "https://www.gatsbyjs.org/docs/mdx/writing-pages/"
+            "url": "https://yr1m.notion.site/SFOO-Student-Food-22d541c3e60045b8b002256196d71314"
           }
         ]
       }
