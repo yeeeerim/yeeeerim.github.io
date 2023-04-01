@@ -79,7 +79,7 @@ export function PostSection(): React.ReactElement {
   //   }, []);
 
   return (
-    <Animation type="fadeUp" delay={1000}>
+    <Animation type="fadeUp" delay={200}>
       <Slider additionalClasses={["Articles"]}>
         {articles.length > 0
           ? articles.slice(0, 3).map((article, key) => {
