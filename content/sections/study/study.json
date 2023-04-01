@@ -1,0 +1,23 @@
+{
+  "hashtag": [
+    {
+      "label": "React.js",
+      "image": {
+        "src": "../../images/joystick.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Next.js",
+      "image": {
+        "src": "../../images/notebook.png",
+        "alt": ""
+      }
+    }
+  ],
+  "button": {
+    "visible": true,
+    "label": "+ Load More",
+    "initiallyShownInterests": 5
+  }
+}
