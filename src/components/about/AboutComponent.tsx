@@ -11,7 +11,7 @@ const AboutSection = () => {
     <AboutStyled>
       {/* Profile */}
       <div className="profile">
-        <div className="title">Profile</div>
+        <div className="title">Profile.</div>
         <div className="content">
           <div className="circle" />
           <div>
@@ -28,15 +28,13 @@ const AboutSection = () => {
 
       {/* TimeStamp */}
       <div className="timestamp">
-        <div className="title">Timestamp</div>
+        <div className="title">Timestamp.</div>
         <div className="content">
           <div className="graph">
             <div className="line" />
             <div className="time-line">
               <ul>
                 {data.timestamp.map((item, index) => {
-                  console.log(item);
-
                   return (
                     <li key={`timestamp-${index}`}>
                       <div className="circle" />
@@ -137,11 +135,9 @@ const AboutStyled = styled.div`
 
   /* common */
   .title {
-    border: 2px solid white;
-    padding: 4px 15px;
-    border-radius: 20px;
+    color: #ffb400;
     display: inline;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
   }
 `;
