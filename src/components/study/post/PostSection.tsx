@@ -12,7 +12,7 @@ import React from "react";
 import { Animation } from "../../Animation";
 import "./post.css";
 
-enum ArticleSource {
+export enum ArticleSource {
   Medium = "medium",
   Blog = "blog",
 }
@@ -26,10 +26,14 @@ interface ArticleSourceConfiguration {
   };
 }
 
-export function PostSection(): React.ReactElement {
+export function PostSection({
+  sources,
+}: {
+  sources: ArticleSource[];
+}): React.ReactElement {
   const response = useLocalDataSource();
   const [articles, setArticles] = React.useState<ArticleCard[]>([]);
-  //   const configuration = validateAndConfigureSources(props.sources);
+  const configuration = validateAndConfigureSources(sources);
 
   async function collectArticlesFromSources(
     configuration: ArticleSourceConfiguration
@@ -72,11 +76,11 @@ export function PostSection(): React.ReactElement {
       .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
   }
 
-  //   React.useEffect(() => {
-  //     (async function () {
-  //       setArticles(await collectArticlesFromSources(configuration));
-  //     })();
-  //   }, []);
+  React.useEffect(() => {
+    (async function () {
+      setArticles(await collectArticlesFromSources(configuration));
+    })();
+  }, []);
 
   return (
     <Animation type="fadeUp" delay={200}>
