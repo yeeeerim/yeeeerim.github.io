@@ -4,8 +4,8 @@ import {
   ButtonType,
 } from "gatsby-theme-portfolio-minimal/src/components/Button";
 import React from "react";
-import { Animation } from "../../components/Animation";
-import { useLocalDataSource } from "./data";
+import { Animation } from "../../Animation";
+import { useLocalDataSource } from "../data";
 import { GatsbyImage } from "gatsby-plugin-image";
 import "./hashtag.css";
 

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { HashSection } from "./hashSection";
-import PostSection from "./PostSection";
+import { HashSection } from "./hashTag/HashSection";
+import PostSection from "./post/PostSection";
 
 const StudySection = () => {
   return (
