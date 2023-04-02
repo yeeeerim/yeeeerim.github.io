@@ -4,7 +4,7 @@
   "description": "",
   "image": {
     "src": "../../images/me.jpeg",
-    "alt": "Gatsby Logo"
+    "alt": "me"
   },
   "socialProfiles": {
     "from": ["Github", "Mail"],
