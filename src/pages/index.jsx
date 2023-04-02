@@ -8,8 +8,7 @@ import {
   // ProjectsSection,
   Seo,
 } from "gatsby-theme-portfolio-minimal";
-
-import { HeroSection } from "../components/hero/HeroComponent";
+import { HeroSection } from "../components/hero";
 
 const IndexPage = () => {
   return (

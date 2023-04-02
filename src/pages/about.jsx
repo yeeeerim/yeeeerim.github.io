@@ -1,6 +1,6 @@
 import React from "react";
-import { LegalSection, Page, Seo } from "gatsby-theme-portfolio-minimal";
-import AboutSection from "../components/about/AboutComponent";
+import { Page, Seo } from "gatsby-theme-portfolio-minimal";
+import AboutSection from "../components/about/AboutSection";
 
 const AboutPage = () => {
   return (

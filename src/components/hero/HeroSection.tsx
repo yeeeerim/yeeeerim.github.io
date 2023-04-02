@@ -7,7 +7,7 @@ import { useLocalDataSource } from "./data";
 import { PageSection } from "gatsby-theme-portfolio-minimal/src/types";
 import { HeroStyled } from "./HeroStyled";
 
-export function HeroSection(props: PageSection): React.ReactElement {
+const HeroSection = (props: PageSection): React.ReactElement => {
   const response = useLocalDataSource();
   const data = response.allHeroJson.sections[0];
 
@@ -61,4 +61,6 @@ export function HeroSection(props: PageSection): React.ReactElement {
       </HeroStyled>
     </Animation>
   );
-}
+};
+
+export default HeroSection;

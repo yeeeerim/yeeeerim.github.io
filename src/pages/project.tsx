@@ -1,6 +1,6 @@
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import React from "react";
-import ProjectSection from "../components/project/ProjectComponent";
+import ProjectSection from "../components/project/ProjectSection";
 
 const ProjectPage = () => {
   return (
