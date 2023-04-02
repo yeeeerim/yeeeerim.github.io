@@ -19,18 +19,18 @@ const ProjectSection = () => {
   return (
     <ProjectStyled>
       <div className="tab-area">
-        <button
+        <div
           className={selectTab === TabType.TEAM ? "focus" : ""}
           onClick={(e) => setSelectTab(TabType.TEAM)}
         >
           Team
-        </button>
-        <button
+        </div>
+        <div
           className={selectTab === TabType.PERSONAL ? "focus" : ""}
           onClick={(e) => setSelectTab(TabType.PERSONAL)}
         >
           Personal
-        </button>
+        </div>
       </div>
       {/* TODO */}
       <Animation type="fadeIn">
@@ -68,21 +68,17 @@ const ProjectStyled = styled.div`
   justify-content: space-between;
 
   .tab-area {
-    button {
-      border: 2px solid white;
+    div {
       padding: 4px 15px;
-      border-radius: 15px;
       display: inline;
       font-size: 1.5rem;
       font-weight: 600;
       cursor: pointer;
       color: white;
-      background-color: black;
-      margin-right: 10px;
+      margin-right: 5px;
 
       &.focus {
-        color: black;
-        background-color: white;
+        color: #f7b000;
       }
     }
   }
