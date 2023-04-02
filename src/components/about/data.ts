@@ -10,6 +10,7 @@ interface AboutSectionQueryResult {
         hobby: string;
         cert: string;
         birthday: string;
+        image: ImageObject;
       };
       timestamp: {
         date: string;
@@ -31,6 +32,14 @@ export const useLocalDataSource = (): AboutSectionQueryResult => {
             hobby
             cert
             birthday
+            image {
+              alt
+              src {
+                childImageSharp {
+                  gatsbyImageData(width: 140)
+                }
+              }
+            }
           }
           timestamp {
             date

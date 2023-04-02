@@ -13,7 +13,13 @@ const AboutSection = () => {
       <div className="profile">
         <div className="title">Profile.</div>
         <div className="content">
-          <div className="circle" />
+          {data.profile.image.src && (
+            <GatsbyImage
+              className="img"
+              image={data.profile.image.src.childImageSharp.gatsbyImageData}
+              alt={data.profile.image.alt || `Profile ${data.profile.name}`}
+            />
+          )}
           <div>
             <ul className="desc">
               <li>이름 : {data.profile.name}</li>
@@ -79,14 +85,14 @@ const AboutStyled = styled.div`
     .content {
       display: flex;
       margin: 30px 0;
-      .circle {
+      .img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        background-color: #ddd;
       }
       .desc {
         list-style: square;
+        line-height: 26px;
       }
     }
   }
@@ -135,7 +141,7 @@ const AboutStyled = styled.div`
 
   /* common */
   .title {
-    color: #ffb400;
+    color: #f7b000;
     display: inline;
     font-size: 1.6rem;
     font-weight: 600;

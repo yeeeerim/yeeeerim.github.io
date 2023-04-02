@@ -7,7 +7,6 @@ const AboutPage = () => {
     <>
       <Seo title="About Me" useTitleTemplate={true} noIndex={true} />
       <Page>
-        {/* <LegalSection sectionId="privacy" heading="About Me" /> */}
         <AboutSection />
       </Page>
     </>
