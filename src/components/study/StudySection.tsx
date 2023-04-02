@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { HashSection } from "./hashTag/HashSection";
-import PostSection, { ArticleSource } from "./post/PostSection";
+import PostSection from "./post/PostSection";
 
 const StudySection = () => {
   return (
@@ -10,7 +10,7 @@ const StudySection = () => {
       <HashSection />
 
       <h2># Post</h2>
-      <PostSection sources={[ArticleSource.Medium]} />
+      <PostSection />
     </StudyStyled>
   );
 };

@@ -1,6 +1,5 @@
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import React from "react";
-import { HashSection } from "../components/study/hashTag/HashSection";
 import StudySection from "../components/study/StudySection";
 
 const StudyPage = () => {
