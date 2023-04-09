@@ -32,7 +32,6 @@ const ProjectSection = () => {
           Personal
         </div>
       </div>
-      {/* TODO */}
       <Animation type="fadeIn">
         <Slider
           style={{
@@ -40,17 +39,18 @@ const ProjectSection = () => {
             flexDirection: "column",
           }}
         >
-          {selectTab === TabType.TEAM
-            ? data.project.team.map((p, key) => {
-                return p.visible ? (
-                  <ProjectItem key={key} index={key} data={p} />
-                ) : null;
-              })
-            : data.project.personal.map((p, key) => {
-                return p.visible ? (
-                  <ProjectItem key={key} index={key} data={p} />
-                ) : null;
-              })}
+          {selectTab === TabType.TEAM &&
+            data.project.team.map((p, key) => {
+              return p.visible ? (
+                <ProjectItem key={key} index={key} data={p} />
+              ) : null;
+            })}
+          {selectTab === TabType.PERSONAL &&
+            data.project.personal.map((p, key) => {
+              return p.visible ? (
+                <ProjectItem key={key} index={key} data={p} />
+              ) : null;
+            })}
         </Slider>
       </Animation>
     </ProjectStyled>
