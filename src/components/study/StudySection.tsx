@@ -8,9 +8,9 @@ const StudySection = () => {
     <StudyStyled>
       <h2># HashTag</h2>
       <HashSection />
-
       <h2># Post</h2>
-      <PostSection />
+      작성된 글이 없습니다.
+      {/* <PostSection /> */}
     </StudyStyled>
   );
 };
