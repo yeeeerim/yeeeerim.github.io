@@ -1,8 +1,24 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { ArticlesSection } from "./ArticlesSection";
+
+enum ArticleSource {
+  Medium = "medium",
+  Blog = "blog",
+}
 
 const DiarySection = () => {
-  return <DiaryStyled>작성된 글이 없습니다.</DiaryStyled>;
+  return (
+    <DiaryStyled>
+      <ArticlesSection
+        sectionId="articles"
+        heading="Diary"
+        sources={[ArticleSource.Blog]}
+      />
+
+      {/* 작성된 글이 없습니다. */}
+    </DiaryStyled>
+  );
 };
 
 export default DiarySection;
