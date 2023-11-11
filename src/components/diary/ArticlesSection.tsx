@@ -1,17 +1,12 @@
 import React from "react";
 import { Animation } from "gatsby-theme-portfolio-minimal/src/components/Animation";
 import { Slider } from "gatsby-theme-portfolio-minimal/src/components/Slider";
-import {
-  ArticleCard,
-  ArticleCardSkeleton,
-} from "gatsby-theme-portfolio-minimal/src/components/ArticleCard";
 import { useSiteMetadata } from "gatsby-theme-portfolio-minimal/src/hooks/useSiteMetadata";
-import {
-  useLocalDataSource,
-  useMediumFeed,
-} from "gatsby-theme-portfolio-minimal/src/sections/Articles/data";
+import { useMediumFeed } from "gatsby-theme-portfolio-minimal/src/sections/Articles/data";
 import { PageSection } from "gatsby-theme-portfolio-minimal/src/types";
 import styled from "@emotion/styled";
+import { useLocalDataSource } from "./data";
+import { ArticleCard } from "./ArticleCard";
 
 enum ArticleSource {
   Medium = "medium",
