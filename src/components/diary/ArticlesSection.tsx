@@ -94,8 +94,8 @@ export function ArticlesSection(
             ? articles.slice(0, 3).map((article, key) => {
                 return <ArticleCard key={key} data={article} />;
               })
-            : [...Array(3)].map((_, key) => {
-                return <ArticleCardSkeleton key={key} />;
+            : [...Array(1)].map((_, key) => {
+                return <div key={key}>작성된 글이 없습니다.</div>;
               })}
         </Slider>
       </Animation>
