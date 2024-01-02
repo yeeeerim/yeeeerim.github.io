@@ -48,7 +48,7 @@
     ],
     "personal": [
       {
-        "visible": true,
+        "visible": false,
         "category": "📍 1-contributor",
         "title": "YOUTUBE CLONE",
         "description": "유튜브 사이트와 유사한 기능을 가진 사이트입니다. 회원가입, 비디오 업로드, 구독, 댓글, 좋아요, 싫어요 기능을 사용할 수 있습니다.",
