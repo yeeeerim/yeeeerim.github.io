@@ -4,11 +4,11 @@ import {
   // ArticlesSection,
   // ContactSection,
   // InterestsSection,
-  Page,
   // ProjectsSection,
   Seo,
 } from "gatsby-theme-portfolio-minimal";
 import { HeroSection } from "../components/hero";
+import { Page } from "../components/page";
 
 const IndexPage = () => {
   return (

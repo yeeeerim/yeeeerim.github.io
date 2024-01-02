@@ -1,5 +1,6 @@
 import React from "react";
-import { ContactSection, Page, Seo } from "gatsby-theme-portfolio-minimal";
+import { ContactSection, Seo } from "gatsby-theme-portfolio-minimal";
+import { Page } from "../components/page";
 
 const ContackPage = () => {
   return (
