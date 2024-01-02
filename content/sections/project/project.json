@@ -20,10 +20,28 @@
           {
             "type": "notion",
             "url": "https://yr1m.notion.site/SFOO-Student-Food-c301bb35acd641e5a53f24bc5161000b?pvs=4"
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "category": "🍁 3-contributor",
+        "title": "메이플 환산 주스탯",
+        "description": "메이플스토리 게임 내 캐릭터의 스펙 및 효율을 계산해주는 사이트입니다. 넥슨 오픈 API를 통해 사용자의 아이템을 보여주고, 보스 컷을 계산해줍니다.",
+        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
+        "image": {
+          "src": "../../images/ms_img.png",
+          "alt": "maplescouter_img",
+          "linkTo": "https://maplescouter.com/"
+        },
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/gboycdw/Maple-SCAP"
           },
           {
             "type": "external",
-            "url": "https://studentsoup.site/"
+            "url": "https://maplescouter.com/"
           }
         ]
       }
