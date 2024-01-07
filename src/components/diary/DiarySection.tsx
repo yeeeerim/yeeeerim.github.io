@@ -11,7 +11,7 @@ const DiarySection = () => {
   return (
     <DiaryStyled>
       <ArticlesSection
-        sectionId="articles"
+        sectionId="diary"
         heading="Diary"
         sources={[ArticleSource.Blog]}
       />
