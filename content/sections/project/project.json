@@ -44,6 +44,38 @@
             "url": "https://maplescouter.com/"
           }
         ]
+      },
+      {
+        "visible": true,
+        "category": "🍋 6-contributor",
+        "title": "LIME",
+        "description": "취미 아이템 구매를 위한 결정을 도와주는 서비스입니다.",
+        "tags": [
+          "TypeScript",
+          "Tailwind CSS",
+          "Recoil",
+          "Next.js 14",
+          "React-query"
+        ],
+        "image": {
+          "src": "../../images/lime_img.png",
+          "alt": "lime_img",
+          "linkTo": "https://uju-lime.vercel.app/"
+        },
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/uju-in/lime-frontend"
+          },
+          {
+            "type": "notion",
+            "url": "https://square-jam-29f.notion.site/Life-Time-7d2747a0361447bfbac3217ef9a3b97a"
+          },
+          {
+            "type": "external",
+            "url": "https://uju-lime.vercel.app/"
+          }
+        ]
       }
     ],
     "personal": [
