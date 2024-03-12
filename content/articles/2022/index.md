@@ -125,11 +125,11 @@ GitHub의 Pull-Request 기능을 통해 Frontend 코드 리뷰어 역할을 맡�
 
 아래와 같이 코드 리팩토링 뿐만 아니라,
 
-![](https://velog.velcdn.com/images/yr1m/post/302fe566-4774-459d-b18a-d5a4c810d1b4/image.png)
+<img src="https://velog.velcdn.com/images/yr1m/post/302fe566-4774-459d-b18a-d5a4c810d1b4/image.png" width='100%'>
 
 UI/UX 적인 면까지 고려하여 조언을 해주었다.
 
-![](https://velog.velcdn.com/images/yr1m/post/e5df6636-df63-4aab-bed3-3f2da8f1e1e8/image.png)
+<img src="https://velog.velcdn.com/images/yr1m/post/e5df6636-df63-4aab-bed3-3f2da8f1e1e8/image.png" width='100%'>
 
 코드 리뷰를 진행하면서 더 확실한 정보를 제공하기 위해 관련 내용을 더 찾아보게 되어 역량을 많이 쌓을 수 있었던 것 같아 좋은 경험이었다. 😊😊
 
