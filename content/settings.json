@@ -1,10 +1,10 @@
 {
   "siteMetadata": {
     "language": "en",
-    "siteUrl": "https://gatsby-starter-portfolio-minimal-theme.netlify.app/",
-    "title": "Gatsby Starter for Portfolio Minimal",
+    "siteUrl": "https://yrim.me/",
+    "title": "About Yerim",
     "titleTemplate": "%s · About Yerim",
-    "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+    "description": "About Yerim",
     "author": "Yerim",
     "avatar": "../content/images/me.jpeg",
     "bio": "안녕하세요. 프론트엔드 개발자 진예림입니다.",
