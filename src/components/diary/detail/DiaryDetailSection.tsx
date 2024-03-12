@@ -1,0 +1,262 @@
+import React from "react";
+import styled from "@emotion/styled";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { useSiteMetadata } from "gatsby-theme-portfolio-minimal/src/hooks/useSiteMetadata";
+import { useArticleData } from "./data";
+import { Seo } from "gatsby-theme-portfolio-minimal";
+import { Page } from "../../../components/page";
+
+const DiaryDetailSection = ({ props }: any) => {
+  const articles = useArticleData();
+  const article = articles.find((a) => a.slug.includes(props.title));
+
+  if (!article) return <div>작성된 글이 없습니다.</div>;
+
+  return (
+    <DiaryDetailStyled>
+      <Seo
+        title={article.title}
+        description={article.description || undefined}
+        useTitleTemplate={true}
+      />
+      <Page>
+        <article className={"Article"}>
+          <div className={"Breadcrumb"}>
+            <Link to={"/diary"} title="Back To Article Listing">
+              <span className={"BackArrow"}>&#10094;</span>
+              All Articles
+            </Link>
+          </div>
+          <section className={"Header"}>
+            <span className={"Category"}>{article.categories.join(" / ")}</span>
+            <h1>{article.title}</h1>
+            <div className={"Details"}>
+              {article.date}
+              <span className={"ReadingTime"}>{article.readingTime.text}</span>
+            </div>
+          </section>
+          {article.banner && article.banner.src && (
+            <section className={"Banner"}>
+              <GatsbyImage
+                image={article.banner.src.childImageSharp.gatsbyImageData}
+                alt={article.banner.alt || `Image for ${article.title}`}
+                imgClassName={"BannerImage"}
+              />
+              {article.banner.caption && (
+                <span
+                  className={"BannerCaption"}
+                  dangerouslySetInnerHTML={{ __html: article.banner.caption }}
+                />
+              )}
+            </section>
+          )}
+          <section className={"Body"}>
+            <div
+              className={"Content"}
+              dangerouslySetInnerHTML={{ __html: article.body }}
+            />
+            {article.keywords &&
+              article.keywords.map((keyword, key) => {
+                return (
+                  <span key={key} className={"Keyword"}>
+                    {keyword}
+                  </span>
+                );
+              })}
+          </section>
+          <section className={"Footer"}>
+            <AuthorSnippet />
+          </section>
+        </article>
+      </Page>
+    </DiaryDetailStyled>
+  );
+};
+
+function AuthorSnippet(): React.ReactElement {
+  const { author, avatar, bio } = useSiteMetadata();
+  return (
+    <AuthorSnippetStyled className={"AuthorSnippet"}>
+      <GatsbyImage
+        image={avatar.childImageSharp.gatsbyImageData}
+        alt={author}
+        className={"Avatar"}
+      />
+      <div className={"Description"}>
+        <span className={"WrittenBy"}>
+          Written By <u>{author}</u>
+        </span>
+        <p className={"Bio"}>{bio}</p>
+      </div>
+    </AuthorSnippetStyled>
+  );
+}
+
+const DiaryDetailStyled = styled.div`
+  .Breadcrumb {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+    background-color: var(--subtext-color);
+    border-radius: var(--border-radius);
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .Breadcrumb a {
+    letter-spacing: +1px;
+  }
+
+  .Breadcrumb a,
+  .Breadcrumb .BackArrow {
+    color: var(--background-color);
+  }
+
+  .Breadcrumb .BackArrow {
+    margin-right: 0.25rem;
+  }
+
+  .Article {
+    width: 100%;
+    height: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: var(--page-padding);
+  }
+
+  .Article .Header,
+  .Article .Banner,
+  .Article .Body,
+  .Article .Footer {
+    margin-bottom: 3rem;
+  }
+
+  .Article .Category {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: +1px;
+    color: var(--subtext-color);
+  }
+
+  .Article .Details {
+    font-size: 0.875rem;
+    letter-spacing: +0.5px;
+  }
+
+  .Article .ReadingTime {
+    margin-left: 0.5rem;
+  }
+
+  .Article .ReadingTime::before {
+    content: "–";
+    margin-right: 0.5rem;
+  }
+
+  .Article .BannerImage {
+    border-radius: var(--border-radius);
+    margin-bottom: 0;
+  }
+
+  .Article .BannerCaption {
+    display: block;
+    font-size: 0.875rem;
+    letter-spacing: +0.5px;
+    text-align: center;
+  }
+
+  .Article .Body .Content {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .Article .Body .Keyword {
+    font-size: 0.875rem;
+    background-color: var(--tertiary-color);
+    color: var(--subtext-color);
+    padding: 0.125rem 0.375rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .Article .Footer {
+    border-top: 3px solid var(--tertiary-color);
+    padding-top: 3rem;
+  }
+
+  .Article img {
+    max-height: 660px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+
+  :global(.gatsby-resp-image-wrapper),
+  :global(.gatsby-resp-image-background-image) {
+    margin: 2rem 0;
+    max-height: 660px;
+    overflow-y: hidden;
+  }
+
+  .Article figure {
+    margin: 2rem 0;
+  }
+
+  .Article figure > figcaption {
+    margin-top: -1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--subtext-color);
+  }
+`;
+
+const AuthorSnippetStyled = styled.div`
+  &.AuthorSnippet {
+    width: 100%;
+    max-width: 660px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .Avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .Description {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .WrittenBy {
+      font-size: 0.875rem;
+      letter-spacing: +0.5px;
+      color: var(--subtext-color);
+    }
+
+    .Bio {
+      margin: 0.5rem 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &.AuthorSnippet {
+      padding: var(--page-padding);
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .Description {
+        width: 100%;
+        max-width: 27.5rem;
+      }
+    }
+  }
+`;
+
+export default DiaryDetailSection;
