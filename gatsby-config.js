@@ -1,9 +1,10 @@
 module.exports = {
   plugins: [
+    "gatsby-plugin-cname",
     {
       resolve: "gatsby-theme-portfolio-minimal",
       options: {
-        siteUrl: "https://gatsby-starter-portfolio-minimal-theme.netlify.app/", // Used for sitemap generation
+        siteUrl: "https://yrim.me/", // Used for sitemap generation
         manifestSettings: {
           favicon: "./content/images/favicon-dino.png", // Path is relative to the root
           siteName: "My Minimal Portfolio", // Used in manifest.json
