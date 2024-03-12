@@ -44,18 +44,22 @@ const AboutSection = () => {
                   return (
                     <li key={`timestamp-${index}`}>
                       <div className="circle" />
-                      <div className="date">{item.date}</div>
-                      <div className="desc">{item.desc}</div>
-                      <div className="logo">
-                        {item.logo && item.logo.src && (
-                          <GatsbyImage
-                            image={
-                              item.logo.src.childImageSharp.gatsbyImageData ||
-                              ""
-                            }
-                            alt={item.logo.alt || ""}
-                          />
-                        )}
+                      <div className="dateAndDesc">
+                        <div className="date">{item.date}</div>
+                        <div className="descAndLogo">
+                          <div className="desc">{item.desc}</div>
+                          <div className="logo">
+                            {item.logo && item.logo.src && (
+                              <GatsbyImage
+                                image={
+                                  item.logo.src.childImageSharp
+                                    .gatsbyImageData || ""
+                                }
+                                alt={item.logo.alt || ""}
+                              />
+                            )}
+                          </div>
+                        </div>
                       </div>
                     </li>
                   );
@@ -84,6 +88,7 @@ const AboutStyled = styled.div`
     margin-bottom: 70px;
     .content {
       display: flex;
+      flex-direction: row;
       margin: 30px 0;
       .img {
         width: 150px;
@@ -93,6 +98,12 @@ const AboutStyled = styled.div`
       .desc {
         list-style: square;
         line-height: 26px;
+      }
+      @media (max-width: 767px) {
+        flex-direction: column;
+        .desc {
+          padding-left: 20px;
+        }
       }
     }
   }
@@ -105,9 +116,12 @@ const AboutStyled = styled.div`
         position: relative;
         .line {
           width: 3px;
-          height: 350px;
+          height: 360px;
           background-color: #fbfafa;
           margin: 20px 20px 20px 25px;
+          @media (max-width: 767px) {
+            height: 500px;
+          }
         }
         .time-line {
           position: absolute;
@@ -126,11 +140,21 @@ const AboutStyled = styled.div`
                 width: 20px;
                 margin: 0 15px 0 16px;
               }
-              .date {
-                width: 300px;
-              }
-              .logo {
-                margin: 0 10px;
+              .dateAndDesc {
+                display: flex;
+                flex-direction: row;
+                .date {
+                  width: 300px;
+                }
+                .logo {
+                  margin: 0 10px;
+                }
+                .descAndLogo {
+                  display: flex;
+                }
+                @media (max-width: 767px) {
+                  flex-direction: column;
+                }
               }
             }
           }
