@@ -14,7 +14,7 @@ keywords:
 
 첫 번째 회고를 쓴 지 벌써 1년이나 지났다..!
 
-<img src="https://velog.velcdn.com/images/yr1m/post/e94b44f5-02eb-4b6b-8ff9-cfda924140cc/image.png" style="width: 400px" />
+<img src="https://velog.velcdn.com/images/yr1m/post/e94b44f5-02eb-4b6b-8ff9-cfda924140cc/image.png" style="width: 400px; max-width: 100%" />
 
 첫 회고에서 마지막에 이런 문장을 적었는데, 이번 회고를 작성하면서 반성하는 시간을 가져보려한다.
 
@@ -48,7 +48,7 @@ keywords:
 <span style="color:orange; fontWeight: 700">무작정 const... 부터 코드 짜는 습관</span>
 팀장님이 매번 강조하시던 말이 있는데, '큰 그림부터 그리기' 이다.
 
-![](https://velog.velcdn.com/images/yr1m/post/75b73748-979b-4fe0-ba61-4eaa7a118831/image.png)
+<img src="https://velog.velcdn.com/images/yr1m/post/75b73748-979b-4fe0-ba61-4eaa7a118831/image.png" width="100%">
 
 복잡한 기능을 구현하기에 앞서 피그잼 도구를 이용해서 설계도를 만들고 개발에 들어가는 연습을 했다.
 설계도를 그리다보면, 기획팀에서 생각하지 못한 경우의 수를 마주쳐 대비를 할 수도 있었고, 다른 팀 혹은 백엔드 개발자에게 보여주며 해당 로직이 맞는지 확인하는 과정이 추가되면서 코드를 뒤엎을 일이 거의 없다 😊
@@ -116,9 +116,9 @@ Grid 구조나 아이템 정렬, 반응형 등 작업하면서 막히는 부분�
 더 많은 경력을 쌓지 못해 아쉬움이 남지만
 더 큰 회사로 갈 수 있는 기회라고 생각하고 평소에 하고 싶었던 공부와 자기계발을 하고 있다.
 
-<img style="width:700px" src="https://velog.velcdn.com/images/yr1m/post/e8050262-9fdb-4fac-aeb1-0af3eb02faaa/image.png" alt="">
+<img style="width:700px; max-width: 100%" src="https://velog.velcdn.com/images/yr1m/post/e8050262-9fdb-4fac-aeb1-0af3eb02faaa/image.png" alt="">
 
-<img style="width:700px" src="https://velog.velcdn.com/images/yr1m/post/b7b6f7a3-d75f-4175-98c7-8a0504330076/image.png" alt="">
+<img style="width:700px; max-width: 100%" src="https://velog.velcdn.com/images/yr1m/post/b7b6f7a3-d75f-4175-98c7-8a0504330076/image.png" alt="">
 
 ### # 느낀 점
 

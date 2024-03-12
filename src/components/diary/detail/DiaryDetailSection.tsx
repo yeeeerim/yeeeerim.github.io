@@ -94,6 +94,32 @@ function AuthorSnippet(): React.ReactElement {
 }
 
 const DiaryDetailStyled = styled.div`
+  blockquote {
+    border-left: 1px;
+    border-style: solid;
+    border-color: #eb5757;
+    border-width: 3px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    margin: 0;
+    padding-left: 20px;
+    background-color: rgba(135, 131, 120, 0.15);
+    font-size: 1rem;
+    p {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    ol,
+    ul {
+      padding: 5px 0px 5px 20px;
+    }
+  }
+  .language-text {
+    background: rgba(135, 131, 120, 0.15);
+    color: #eb5757;
+    padding: 2px 4px;
+  }
   .Breadcrumb {
     display: inline-block;
     margin-bottom: 2rem;
