@@ -6,12 +6,18 @@ import { useSiteMetadata } from "gatsby-theme-portfolio-minimal/src/hooks/useSit
 import { useArticleData } from "./data";
 import { Seo } from "gatsby-theme-portfolio-minimal";
 import { Page } from "../../../components/page";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 const DiaryDetailSection = ({ props }: any) => {
   const articles = useArticleData();
   const article = articles.find((a) => a.slug.includes(props.title));
 
   if (!article) return <div>작성된 글이 없습니다.</div>;
+
+  const dateNow = dayjs();
+  const relativeTime = dateNow.from(article.date, true);
 
   return (
     <DiaryDetailStyled>
@@ -33,7 +39,7 @@ const DiaryDetailSection = ({ props }: any) => {
             <h1>{article.title}</h1>
             <div className={"Details"}>
               {article.date}
-              <span className={"ReadingTime"}>{article.readingTime.text}</span>
+              <span className={"ReadingTime"}>{relativeTime} ago</span>
             </div>
           </section>
           {article.banner && article.banner.src && (

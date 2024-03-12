@@ -65,7 +65,7 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
         <h4 className={"Title"}>{props.data.title}</h4>
         <div className={"Details"}>
           {formatDate(props.data.publishedAt)}
-          <span className={"RelativeTime"}>{relativeTime}</span>
+          <span className={"RelativeTime"}>{relativeTime} ago</span>
         </div>
       </div>
     </article>
