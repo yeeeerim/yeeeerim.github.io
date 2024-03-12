@@ -46,6 +46,7 @@ keywords:
 
 ⒉
 <span style="color:orange; fontWeight: 700">무작정 const... 부터 코드 짜는 습관</span>
+
 팀장님이 매번 강조하시던 말이 있는데, '큰 그림부터 그리기' 이다.
 
 <img src="https://velog.velcdn.com/images/yr1m/post/75b73748-979b-4fe0-ba61-4eaa7a118831/image.png" width="100%">
@@ -55,6 +56,7 @@ keywords:
 
 ⒊
 <span style="color:orange; fontWeight: 700;">코드 리뷰 문화의 부재</span>
+
 몇 번이고 코드 리뷰 문화를 도입하려 시도했지만, 회사 프로세스 특성상 그게 잘 안 됐다 🥲
 개인적으로 팀장님께 특정 부분에 대한 코드 리뷰를 부탁드리는 방법밖에 없었는데, 팀장님의 시간을 뺏는 것 같아 조심스럽기도 하고, 내 코드를 보여주는 것이 부끄러워 용기가 나지 않았다.
 
@@ -65,6 +67,7 @@ keywords:
 
 ⒋
 <span style="color:orange; fontWeight: 700">퍼블리싱 역량 부족</span>
+
 회사 내에 퍼블리셔 포지션의 개발자분이 계셨지만, 실질적으로 퍼블리싱/프론트 개발로 분담하여 업무를 진행하진 않았다.
 
 따라서 퍼블리싱부터 프론트 개발까지 혼자 진행하는 것이 기본이였는데,
