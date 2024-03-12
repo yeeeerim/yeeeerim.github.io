@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: http://yrim.me/sitemap/sitemap-index.xml
-Host: yrim.me
+Sitemap: https://yrim.me/sitemap/sitemap-index.xml
+Host: https://yrim.me
