@@ -32,27 +32,27 @@ const ProjectSection = () => {
           Personal
         </div>
       </div>
-      <Animation type="fadeIn">
-        <Slider
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {selectTab === TabType.TEAM &&
-            data.project.team.map((p, key) => {
-              return p.visible ? (
-                <ProjectItem key={key} index={key} data={p} />
-              ) : null;
-            })}
-          {selectTab === TabType.PERSONAL &&
-            data.project.personal.map((p, key) => {
-              return p.visible ? (
-                <ProjectItem key={key} index={key} data={p} />
-              ) : null;
-            })}
-        </Slider>
-      </Animation>
+      {/* <Animation type="fadeIn"> */}
+      <Slider
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {selectTab === TabType.TEAM &&
+          data.project.team.map((p, key) => {
+            return p.visible ? (
+              <ProjectItem key={key} index={key} data={p} />
+            ) : null;
+          })}
+        {selectTab === TabType.PERSONAL &&
+          data.project.personal.map((p, key) => {
+            return p.visible ? (
+              <ProjectItem key={key} index={key} data={p} />
+            ) : null;
+          })}
+      </Slider>
+      {/* </Animation> */}
     </ProjectStyled>
   );
 };
