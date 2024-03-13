@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  // AboutSection,
-  // ArticlesSection,
-  // ContactSection,
-  // InterestsSection,
-  // ProjectsSection,
-  Seo,
-} from "gatsby-theme-portfolio-minimal";
+import { Seo } from "gatsby-theme-portfolio-minimal";
 import { HeroSection } from "../components/hero";
 import { Page } from "../components/page";
 
@@ -14,18 +7,8 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="About Yerim" />
-      {/* <Page useSplashScreenAnimation> */}
       <Page>
         <HeroSection sectionId="hero" />
-        {/* <HeroSection sectionId="hero" /> */}
-        {/* <ArticlesSection
-          sectionId="articles"
-          heading="Latest Articles"
-          sources={["Medium"]}
-        />
-        <AboutSection sectionId="about" heading="About Portfolio Minimal" />
-        <InterestsSection sectionId="details" heading="Details" />
-        <ProjectsSection sectionId="features" heading="Built-in Features" /> */}
       </Page>
     </>
   );

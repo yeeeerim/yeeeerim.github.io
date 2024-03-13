@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useLocalDataSource } from "./data";
-import { Animation } from "gatsby-theme-portfolio-minimal/src/components/Animation";
 import { Slider } from "gatsby-theme-portfolio-minimal/src/components/Slider";
 import { ProjectItem } from "./ProjectItem";
 
@@ -32,7 +31,6 @@ const ProjectSection = () => {
           Personal
         </div>
       </div>
-      {/* <Animation type="fadeIn"> */}
       <Slider
         style={{
           display: "flex",
@@ -52,7 +50,6 @@ const ProjectSection = () => {
             ) : null;
           })}
       </Slider>
-      {/* </Animation> */}
     </ProjectStyled>
   );
 };
