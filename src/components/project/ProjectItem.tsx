@@ -80,7 +80,6 @@ export function ProjectItem(props: ProjectProps): React.ReactElement {
       {props.data.image.src && props.data.image.linkTo && (
         <a
           href={props.data.image.linkTo}
-          target="_blank"
           rel="noopener noreferrer"
           aria-label="External Link"
         >
