@@ -15,7 +15,7 @@ const Index = ({ title }: any) => {
   if (!data) return null;
 
   useEffect(() => {
-    fetch(`/projects/${data.name}/index.md`)
+    fetch(`/assets/projects/${data.name}/index.md`)
       .then((response) => response.text())
       .then((text) => setMarkdown(text));
   }, []);
