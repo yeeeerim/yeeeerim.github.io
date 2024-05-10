@@ -31,7 +31,7 @@ const DiaryDetailSection = ({ props }: any) => {
           <div className={"Breadcrumb"}>
             <Link to={"/diary"} title="Back To Article Listing">
               <span className={"BackArrow"}>&#10094;</span>
-              All Articles
+              All Diaries
             </Link>
           </div>
           <section className={"Header"}>
