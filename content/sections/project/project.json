@@ -3,52 +3,8 @@
     "team": [
       {
         "visible": true,
-        "category": "🍔 6-contributor",
-        "title": "SFOO: Student Food",
-        "description": "대학 주변의 맛집을 추천해주는 사이트입니다. 음식점을 검색하고 리뷰를 작성할 수 있으며, 학교 및 학과별 게시판을 통해 정보를 공유할 수 있습니다.",
-        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
-        "image": {
-          "src": "../../images/sfoo.png",
-          "alt": "sfoo_img",
-          "linkTo": "https://yr1m.notion.site/SFOO-Student-Food-c301bb35acd641e5a53f24bc5161000b?pvs=4"
-        },
-        "links": [
-          {
-            "type": "github",
-            "url": "https://github.com/TeamDogeC-2/StudentSoup"
-          },
-          {
-            "type": "notion",
-            "url": "https://yr1m.notion.site/SFOO-Student-Food-c301bb35acd641e5a53f24bc5161000b?pvs=4"
-          }
-        ]
-      },
-      {
-        "visible": true,
-        "category": "🍁 3-contributor",
-        "title": "메이플 환산 주스탯",
-        "description": "메이플스토리 게임 내 캐릭터의 스펙 및 효율을 계산해주는 사이트입니다. 넥슨 오픈 API를 통해 사용자의 아이템을 보여주고, 보스 컷을 계산해줍니다.",
-        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
-        "image": {
-          "src": "../../images/ms_img.png",
-          "alt": "maplescouter_img",
-          "linkTo": "https://maplescouter.com/"
-        },
-        "links": [
-          {
-            "type": "notion",
-            "url": "https://yr1m.notion.site/b37615a0a1d24a3ba7bd4775cd130a62?pvs=4"
-          },
-          {
-            "type": "external",
-            "url": "https://maplescouter.com/"
-          }
-        ]
-      },
-      {
-        "visible": true,
         "category": "🍋 6-contributor",
-        "title": "LIME",
+        "title": "LIME: Life Time",
         "description": "취미 아이템 구매를 위한 결정을 도와주는 서비스입니다.",
         "tags": [
           "TypeScript",
@@ -60,7 +16,7 @@
         "image": {
           "src": "../../images/lime_img.png",
           "alt": "lime_img",
-          "linkTo": "https://uju-lime.vercel.app/"
+          "linkTo": "/project/lime"
         },
         "links": [
           {
@@ -75,7 +31,57 @@
             "type": "external",
             "url": "https://uju-lime.vercel.app/"
           }
-        ]
+        ],
+        "name": "lime",
+        "date": "2024. 01 ~ 2024.04"
+      },
+      {
+        "visible": true,
+        "category": "🍁 3-contributor",
+        "title": "메이플 환산 주스탯",
+        "description": "메이플스토리 게임 내 캐릭터의 스펙 및 효율을 계산해주는 사이트입니다. 넥슨 오픈 API를 통해 사용자의 아이템을 보여주고, 보스 컷을 계산해줍니다.",
+        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
+        "image": {
+          "src": "../../images/ms_img.png",
+          "alt": "maplescouter_img",
+          "linkTo": "/project/maplescouter"
+        },
+        "links": [
+          {
+            "type": "notion",
+            "url": "https://yr1m.notion.site/b37615a0a1d24a3ba7bd4775cd130a62?pvs=4"
+          },
+          {
+            "type": "external",
+            "url": "https://maplescouter.com/"
+          }
+        ],
+        "name": "maplescouter",
+        "date": "2023. 11 ~ ing"
+      },
+      {
+        "visible": true,
+        "category": "🍔 6-contributor",
+        "title": "SFOO: Student Food",
+        "description": "대학 주변의 맛집을 추천해주는 사이트입니다. 음식점을 검색하고 리뷰를 작성할 수 있으며, 학교 및 학과별 게시판을 통해 정보를 공유할 수 있습니다.",
+        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
+        "image": {
+          "src": "../../images/sfoo.png",
+          "alt": "sfoo_img",
+          "linkTo": "/project/sfoo"
+        },
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/TeamDogeC-2/StudentSoup"
+          },
+          {
+            "type": "notion",
+            "url": "https://yr1m.notion.site/SFOO-Student-Food-c301bb35acd641e5a53f24bc5161000b?pvs=4"
+          }
+        ],
+        "name": "sfoo",
+        "date": "2022. 12 ~ 2023. 02"
       }
     ],
     "personal": [
@@ -99,7 +105,9 @@
             "type": "notion",
             "url": "https://yr1m.notion.site/88e8015f564c46fcba44e1ffbf71c12d?pvs=4"
           }
-        ]
+        ],
+        "name": "youtube",
+        "date": "2022. 02. 10 ~ 2022. 02. 20"
       }
     ]
   }
