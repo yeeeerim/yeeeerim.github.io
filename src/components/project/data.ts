@@ -18,6 +18,8 @@ export interface Project {
     url: string;
   }[];
   visible: boolean;
+  name: string; // Unique
+  date: string;
 }
 
 interface ProjectSectionQueryResult {
@@ -53,6 +55,8 @@ export const useLocalDataSource = (): ProjectSectionQueryResult => {
               tags
               title
               visible
+              name
+              date
             }
             personal {
               category
@@ -73,6 +77,8 @@ export const useLocalDataSource = (): ProjectSectionQueryResult => {
               tags
               title
               visible
+              name
+              date
             }
           }
         }
