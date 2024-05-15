@@ -85,6 +85,30 @@ const ProjectDetail = ({ title }: { title: string }) => {
 export default ProjectDetail;
 
 const DiaryDetailStyled = styled.div`
+  /* MarkDown Style */
+  code {
+    background: rgba(135, 131, 120, 0.15);
+    color: #eb5757;
+    padding: 2px 4px;
+    font-size: 0.8rem;
+  }
+  ol > li::marker {
+    color: #009a87;
+  }
+  ol > li > ol {
+    list-style: lower-alpha;
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    color: #009a87;
+    margin: 25px 0 10px;
+  }
+  a {
+    color: #7c96db;
+    text-decoration: underline;
+  }
   blockquote {
     border-left: 1px;
     border-style: solid;
@@ -106,6 +130,8 @@ const DiaryDetailStyled = styled.div`
       padding: 5px 0px 5px 20px;
     }
   }
+  /* MarkDown Style */
+
   .language-text {
     background: rgba(135, 131, 120, 0.15);
     color: #eb5757;
@@ -210,8 +236,8 @@ const DiaryDetailStyled = styled.div`
   }
 
   .Article .Body .Content {
-    font-size: 1.125rem;
-    line-height: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.85rem;
     margin-bottom: 3rem;
   }
 
