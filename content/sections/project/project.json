@@ -195,7 +195,8 @@
           "TypeScript",
           "Gatsby.js",
           "React.js",
-          "GraphQL"
+          "GraphQL",
+          "Styled-Component"
         ],
         "image": {
           "src": "../../images/blog_img.png",
@@ -212,7 +213,8 @@
           {
             "type": "github",
             "url": "https://github.com/yeeeerim/yeeeerim.github.io"
-          }
+          },
+          { "type": "external", "url": "https://yrim.me/" }
         ],
         "name": "blog",
         "date": "2022. 10. 29 ~ ING"
