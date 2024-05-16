@@ -6,6 +6,15 @@ import ReactMarkdown from "react-markdown";
 import { useLocalDataSource } from "../../components/project/data";
 import { CalendarOutlined, LinkOutlined, ToolFilled } from "@ant-design/icons";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import SwiperCore from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+SwiperCore.use([Navigation, Pagination]);
+
 const ProjectDetail = ({ title }: { title: string }) => {
   const [markdown, setMarkdown] = useState("");
   const response = useLocalDataSource();
@@ -63,15 +72,32 @@ const ProjectDetail = ({ title }: { title: string }) => {
             </ul>
           </div>
         </section>
-        {data.image && data.image.src && (
+        {data.banners && (
           <section className={"Banner"}>
-            <GatsbyImage
-              image={data.image.src?.childImageSharp.gatsbyImageData}
-              alt={data.image.alt || "image"}
-              imgClassName={"BannerImage"}
-            />
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              scrollbar={{ draggable: true }}
+              navigation
+              loop
+              pagination={{ clickable: true }}
+            >
+              {data.banners.map((item, index) => {
+                if (item.src)
+                  return (
+                    <SwiperSlide key={index}>
+                      <GatsbyImage
+                        image={item.src.childImageSharp.gatsbyImageData}
+                        alt={item.alt || "image"}
+                        imgClassName={"BannerImage"}
+                      />
+                    </SwiperSlide>
+                  );
+              })}
+            </Swiper>
           </section>
         )}
+
         <section className={"Body"}>
           <div className={"Content"}>
             <ReactMarkdown>{markdown}</ReactMarkdown>
@@ -228,12 +254,34 @@ const DiaryDetailStyled = styled.div`
     }
   }
 
-  .Article .Banner > div {
+  .Banner {
     width: 100%;
     height: 400px;
+    & > div {
+      height: 100%;
+    }
+    .swiper-pagination-bullet {
+      background-color: white;
+      box-shadow: 0px 0px 4px #00000075;
+      opacity: 100;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #009a87;
+    }
+    .gatsby-image-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+      text-shadow: 0px 0px 10px #0000009e;
+    }
   }
 
   .Article .BannerImage {
+    width: 100%;
+    height: 100%;
     border-radius: var(--border-radius);
     margin-bottom: 0;
   }
