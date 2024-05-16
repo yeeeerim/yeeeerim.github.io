@@ -18,6 +18,32 @@
           "alt": "lime_img",
           "linkTo": "/project/lime"
         },
+        "banners": [
+          {
+            "src": "../../images/lime_img.png",
+            "alt": "lime_img"
+          },
+          {
+            "src": "../../images/lime_banner_1.png",
+            "alt": "lime_img"
+          },
+          {
+            "src": "../../images/lime_banner_2.png",
+            "alt": "lime_img"
+          },
+          {
+            "src": "../../images/lime_banner_3.png",
+            "alt": "lime_img"
+          },
+          {
+            "src": "../../images/lime_banner_4.png",
+            "alt": "lime_img"
+          },
+          {
+            "src": "../../images/lime_banner_5.png",
+            "alt": "lime_img"
+          }
+        ],
         "links": [
           {
             "type": "github",
@@ -46,6 +72,32 @@
           "alt": "maplescouter_img",
           "linkTo": "/project/maplescouter"
         },
+        "banners": [
+          {
+            "src": "../../images/ms_img.png",
+            "alt": "ms_img"
+          },
+          {
+            "src": "../../images/ms_banner_1.png",
+            "alt": "ms_img"
+          },
+          {
+            "src": "../../images/ms_banner_2.png",
+            "alt": "ms_img"
+          },
+          {
+            "src": "../../images/ms_banner_3.png",
+            "alt": "ms_img"
+          },
+          {
+            "src": "../../images/ms_banner_4.png",
+            "alt": "ms_img"
+          },
+          {
+            "src": "../../images/ms_banner_5.png",
+            "alt": "ms_img"
+          }
+        ],
         "links": [
           {
             "type": "notion",
@@ -70,6 +122,24 @@
           "alt": "sfoo_img",
           "linkTo": "/project/sfoo"
         },
+        "banners": [
+          {
+            "src": "../../images/sfoo.png",
+            "alt": "sfoo_img"
+          },
+          {
+            "src": "../../images/sfoo_banner_1.png",
+            "alt": "sfoo_img"
+          },
+          {
+            "src": "../../images/sfoo_banner_2.png",
+            "alt": "sfoo_img"
+          },
+          {
+            "src": "../../images/sfoo_banner_3.png",
+            "alt": "sfoo_img"
+          }
+        ],
         "links": [
           {
             "type": "github",
@@ -96,6 +166,12 @@
           "alt": "youtube_img",
           "linkTo": "https://yr1m.notion.site/88e8015f564c46fcba44e1ffbf71c12d?pvs=4"
         },
+        "banners": [
+          {
+            "src": "../../images/youtube.png",
+            "alt": "youtube_img"
+          }
+        ],
         "links": [
           {
             "type": "github",
