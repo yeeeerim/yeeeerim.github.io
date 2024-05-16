@@ -59,7 +59,7 @@
           }
         ],
         "name": "lime",
-        "date": "2024. 01 ~ 2024. 04"
+        "date": "2024. 01 ~ 2024. 05"
       },
       {
         "visible": true,
@@ -184,6 +184,38 @@
         ],
         "name": "youtube",
         "date": "2022. 02. 10 ~ 2022. 02. 20"
+      },
+      {
+        "visible": true,
+        "category": "👩🏻‍💻 1-contributor",
+        "title": "Gatsby Blog",
+        "description": "Gatsby 프레임워크를 사용하여 만든 블로그입니다. 소개와 회고, 프로젝트 소개를 담고 있습니다.",
+        "tags": [
+          "JavaScript",
+          "TypeScript",
+          "Gatsby.js",
+          "React.js",
+          "GraphQL"
+        ],
+        "image": {
+          "src": "../../images/blog_img.png",
+          "alt": "blog_img",
+          "linkTo": "/project/blog"
+        },
+        "banners": [
+          {
+            "src": "../../images/blog_img.png",
+            "alt": "blog_img"
+          }
+        ],
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/yeeeerim/yeeeerim.github.io"
+          }
+        ],
+        "name": "blog",
+        "date": "2022. 10. 29 ~ ING"
       }
     ]
   }
