@@ -17,7 +17,7 @@ const ProjectSection = () => {
 
   return (
     <ProjectStyled>
-      {/* <div className="tab-area">
+      <div className="tab-area">
         <div
           className={selectTab === TabType.TEAM ? "focus" : ""}
           onClick={(e) => setSelectTab(TabType.TEAM)}
@@ -30,7 +30,7 @@ const ProjectSection = () => {
         >
           Personal
         </div>
-      </div> */}
+      </div>
       <Slider
         style={{
           display: "flex",
