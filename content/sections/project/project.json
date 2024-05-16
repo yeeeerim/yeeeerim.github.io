@@ -40,7 +40,7 @@
         "category": "🍁 3-contributor",
         "title": "메이플 환산 주스탯",
         "description": "메이플스토리 게임 내 캐릭터의 스펙 및 효율을 계산해주는 사이트입니다. 넥슨 오픈 API를 통해 사용자의 아이템을 보여주고, 보스 컷을 계산해줍니다.",
-        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil"],
+        "tags": ["TypeScript", "React.js", "Tailwind CSS", "Recoil", "Figma"],
         "image": {
           "src": "../../images/ms_img.png",
           "alt": "maplescouter_img",
