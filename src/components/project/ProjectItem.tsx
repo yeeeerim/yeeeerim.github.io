@@ -2,28 +2,9 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Animation } from "../Animation";
 import "./project.css";
-import { ImageObject } from "gatsby-theme-portfolio-minimal/src/types";
 import { useMediaQuery } from "gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery";
 import { Icon } from "../Icon";
-
-enum LinkType {
-  External = "external",
-  Github = "github",
-  Notion = "notion",
-}
-
-export interface Project {
-  category?: string;
-  title: string;
-  description: string;
-  image: ImageObject & { linkTo?: string };
-  tags?: string[];
-  links?: {
-    type: LinkType;
-    url: string;
-  }[];
-  visible: boolean;
-}
+import { Project } from "./data";
 
 interface ProjectProps {
   data: Project;
