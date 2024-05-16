@@ -19,8 +19,12 @@ const ProjectDetail = ({ title }: { title: string }) => {
   const [markdown, setMarkdown] = useState("");
   const response = useLocalDataSource();
   const { team, personal } = response.allProjectJson.sections[0].project;
-  const data = team.find((item) => item.name === title);
-  if (!data) return null;
+  let data = team.find((item) => item.name === title);
+  if (!data) {
+    data = personal.find((item) => item.name === title);
+
+    if (!data) return null;
+  }
 
   useEffect(() => {
     fetch(`/assets/projects/${data.name}/index.md`)
