@@ -12,6 +12,7 @@ export interface Project {
   title: string;
   description: string;
   image: ImageObject & { linkTo?: string };
+  banners?: ImageObject[];
   tags?: string[];
   links?: {
     type: LinkType;
@@ -48,6 +49,14 @@ export const useLocalDataSource = (): ProjectSectionQueryResult => {
                   }
                 }
               }
+              banners {
+                alt
+                src {
+                  childImageSharp {
+                    gatsbyImageData(width: 400)
+                  }
+                }
+              }
               links {
                 type
                 url
@@ -64,6 +73,14 @@ export const useLocalDataSource = (): ProjectSectionQueryResult => {
               image {
                 alt
                 linkTo
+                src {
+                  childImageSharp {
+                    gatsbyImageData(width: 400)
+                  }
+                }
+              }
+              banners {
+                alt
                 src {
                   childImageSharp {
                     gatsbyImageData(width: 400)
