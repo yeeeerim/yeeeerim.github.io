@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_portfolio_minimal_theme=self.webpackChunkgatsby_starter_portfolio_minimal_theme||[]).push([[218],{2513:function(e,t,n){n.r(t),n.d(t,{default:function(){return u}});var r=n(7294),l=n(4694),a=n(533);function u(){return r.createElement(r.Fragment,null,r.createElement(a.p,{title:"404: Not found",noIndex:!0}),r.createElement(l.T,null,r.createElement(r.Fragment,null)))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-17474adc7113d86b4cc1.js.map
