@@ -70,7 +70,7 @@ const ProjectDetail = ({ title }: { title: string }) => {
           <ul>
             {data.links?.map((item, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link to={item.url} target="_blank">
                     {item.url}
                   </Link>
