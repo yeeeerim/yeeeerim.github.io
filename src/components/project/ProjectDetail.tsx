@@ -33,88 +33,230 @@ const ProjectDetail = ({ title }: { title: string }) => {
   }, []);
 
   return (
-    <DiaryDetailStyled>
-      <article className={"Article"}>
-        <div className={"Breadcrumb"}>
-          <Link to={"/project"} title="Back">
-            <span className={"BackArrow"}>&#10094;</span>
-            All Projects
-          </Link>
+    <ProjectDetailStyled className={"Article"}>
+      <div className={"Breadcrumb"}>
+        <Link to={"/project"} title="Back">
+          <span className={"BackArrow"}>&#10094;</span>
+          All Projects
+        </Link>
+      </div>
+      <section className={"Header"}>
+        <span className={"Category"}>{data.category}</span>
+        <h1>{data.title}</h1>
+        <div className={"Date"}>
+          <CalendarOutlined style={{ marginBottom: "2px" }} />
+          <span className="text">{`${data.date}`}</span>
         </div>
-        <section className={"Header"}>
-          <span className={"Category"}>{data.category}</span>
-          <h1>{data.title}</h1>
-          <div className={"Date"}>
-            <CalendarOutlined style={{ marginBottom: "2px" }} />
-            <span className="text">{`${data.date}`}</span>
-          </div>
-          <div className={"Tag"}>
-            <ToolFilled style={{ color: "#aaa" }} />
-            <div>
-              {data.tags &&
-                data.tags.map((keyword, key) => {
-                  return (
-                    <span key={key} className={"Keyword"}>
-                      {keyword}
-                    </span>
-                  );
-                })}
-            </div>
-          </div>
-          <div className={"Link"}>
-            <LinkOutlined style={{ marginTop: "5px" }} />
-            <ul>
-              {data.links?.map((item, index) => {
+        <div className={"Tag"}>
+          <ToolFilled style={{ color: "#aaa" }} />
+          <div>
+            {data.tags &&
+              data.tags.map((keyword, key) => {
                 return (
-                  <li>
-                    <Link to={item.url} target="_blank">
-                      {item.url}
-                    </Link>
-                  </li>
+                  <span key={key} className={"Keyword"}>
+                    {keyword}
+                  </span>
                 );
               })}
-            </ul>
           </div>
+        </div>
+        <div className={"Link"}>
+          <LinkOutlined style={{ marginTop: "5px" }} />
+          <ul>
+            {data.links?.map((item, index) => {
+              return (
+                <li>
+                  <Link to={item.url} target="_blank">
+                    {item.url}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+      {data.banners && (
+        <section className={"Banner"}>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            scrollbar={{ draggable: true }}
+            navigation
+            loop
+            pagination={{ clickable: true }}
+          >
+            {data.banners.map((item, index) => {
+              if (item.src)
+                return (
+                  <SwiperSlide key={index}>
+                    <GatsbyImage
+                      image={item.src.childImageSharp.gatsbyImageData}
+                      alt={item.alt || "image"}
+                      imgClassName={"BannerImage"}
+                    />
+                  </SwiperSlide>
+                );
+            })}
+          </Swiper>
         </section>
-        {data.banners && (
-          <section className={"Banner"}>
-            <Swiper
-              spaceBetween={50}
-              slidesPerView={1}
-              scrollbar={{ draggable: true }}
-              navigation
-              loop
-              pagination={{ clickable: true }}
-            >
-              {data.banners.map((item, index) => {
-                if (item.src)
-                  return (
-                    <SwiperSlide key={index}>
-                      <GatsbyImage
-                        image={item.src.childImageSharp.gatsbyImageData}
-                        alt={item.alt || "image"}
-                        imgClassName={"BannerImage"}
-                      />
-                    </SwiperSlide>
-                  );
-              })}
-            </Swiper>
-          </section>
-        )}
+      )}
 
-        <section className={"Body"}>
-          <div className={"Content"}>
-            <ReactMarkdown>{markdown}</ReactMarkdown>
-          </div>
-        </section>
-      </article>
-    </DiaryDetailStyled>
+      <section className={"Body"}>
+        <div className={"Content"}>
+          <ReactMarkdown>{markdown}</ReactMarkdown>
+        </div>
+      </section>
+    </ProjectDetailStyled>
   );
 };
 
 export default ProjectDetail;
 
-const DiaryDetailStyled = styled.div`
+const ProjectDetailStyled = styled.article`
+  width: 100%;
+  height: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: var(--page-padding);
+
+  img {
+    max-height: 660px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+
+  .Category {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: +1px;
+    color: var(--subtext-color);
+  }
+
+  .Date {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: +1px;
+    color: var(--subtext-color);
+    .text {
+      padding: 0.12rem 0.375rem;
+    }
+  }
+
+  .Tag {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+  }
+
+  .Link {
+    color: #aaa;
+    display: flex;
+    align-items: start;
+
+    & > ul {
+      padding: 0.12rem 0.375rem;
+      list-style: none;
+      margin: 0;
+      li {
+        font-size: 0.8rem;
+        a {
+          color: #7c96db;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .Header,
+  .Banner,
+  .Body,
+  .Footer {
+    margin-bottom: 3rem;
+  }
+
+  .BannerImage {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 0;
+  }
+
+  .Breadcrumb {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+    background-color: var(--subtext-color);
+    border-radius: var(--border-radius);
+    font-size: 12px;
+    font-weight: 400;
+
+    a {
+      letter-spacing: +1px;
+    }
+
+    a,
+    .BackArrow {
+      color: var(--background-color);
+    }
+
+    .BackArrow {
+      margin-right: 0.25rem;
+    }
+  }
+
+  .Banner {
+    width: 100%;
+    height: 400px;
+    & > div {
+      height: 100%;
+    }
+    .swiper-pagination-bullet {
+      background-color: white;
+      box-shadow: 0px 0px 4px #00000075;
+      opacity: 100;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #009a87;
+    }
+    .gatsby-image-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+      text-shadow: 0px 0px 10px #0000009e;
+    }
+  }
+
+  .Body .Content {
+    font-size: 0.9rem;
+    line-height: 1.85rem;
+    margin-bottom: 3rem;
+  }
+
+  .Header .Keyword {
+    font-size: 0.775rem;
+    background-color: #fcffd8b0;
+    color: #000;
+    padding: 0.12rem 0.375rem;
+    margin-right: 0.3rem;
+    border-radius: 0.3rem;
+  }
+
+  .Footer {
+    border-top: 3px solid var(--tertiary-color);
+    padding-top: 3rem;
+  }
+
   /* MarkDown Style */
   .Content {
     code {
@@ -164,173 +306,4 @@ const DiaryDetailStyled = styled.div`
   }
 
   /* MarkDown Style */
-
-  .language-text {
-    background: rgba(135, 131, 120, 0.15);
-    color: #eb5757;
-    padding: 2px 4px;
-  }
-  .Breadcrumb {
-    display: inline-block;
-    margin-bottom: 2rem;
-    padding: 0 0.5rem;
-    background-color: var(--subtext-color);
-    border-radius: var(--border-radius);
-    font-size: 12px;
-    font-weight: 400;
-  }
-
-  .Breadcrumb a {
-    letter-spacing: +1px;
-  }
-
-  .Breadcrumb a,
-  .Breadcrumb .BackArrow {
-    color: var(--background-color);
-  }
-
-  .Breadcrumb .BackArrow {
-    margin-right: 0.25rem;
-  }
-
-  .Article {
-    width: 100%;
-    height: 100%;
-    max-width: 740px;
-    margin: 0 auto;
-    padding: var(--page-padding);
-  }
-
-  .Article .Header,
-  .Article .Banner,
-  .Article .Body,
-  .Article .Footer {
-    margin-bottom: 3rem;
-  }
-
-  .Article .Category {
-    display: block;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: +1px;
-    color: var(--subtext-color);
-  }
-
-  .Article .Date {
-    display: flex;
-    column-gap: 5px;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: +1px;
-    color: var(--subtext-color);
-    .text {
-      padding: 0.12rem 0.375rem;
-    }
-  }
-
-  .Article .Tag {
-    display: flex;
-    column-gap: 5px;
-    align-items: center;
-  }
-
-  .Article .Link {
-    color: #aaa;
-    display: flex;
-    align-items: start;
-
-    & > ul {
-      padding: 0.12rem 0.375rem;
-      list-style: none;
-      margin: 0;
-      li {
-        font-size: 0.8rem;
-        a {
-          color: #7c96db;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-
-  .Banner {
-    width: 100%;
-    height: 400px;
-    & > div {
-      height: 100%;
-    }
-    .swiper-pagination-bullet {
-      background-color: white;
-      box-shadow: 0px 0px 4px #00000075;
-      opacity: 100;
-    }
-    .swiper-pagination-bullet-active {
-      background-color: #009a87;
-    }
-    .gatsby-image-wrapper {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #fff;
-      text-shadow: 0px 0px 10px #0000009e;
-    }
-  }
-
-  .Article .BannerImage {
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius);
-    margin-bottom: 0;
-  }
-
-  .Article .Body .Content {
-    font-size: 0.9rem;
-    line-height: 1.85rem;
-    margin-bottom: 3rem;
-  }
-
-  .Article .Header .Keyword {
-    font-size: 0.775rem;
-    background-color: #fcffd8b0;
-    color: #000;
-    padding: 0.12rem 0.375rem;
-    margin-right: 0.3rem;
-    border-radius: 0.3rem;
-  }
-
-  .Article .Footer {
-    border-top: 3px solid var(--tertiary-color);
-    padding-top: 3rem;
-  }
-
-  .Article img {
-    max-height: 660px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-  }
-
-  :global(.gatsby-resp-image-wrapper),
-  :global(.gatsby-resp-image-background-image) {
-    margin: 2rem 0;
-    max-height: 660px;
-    overflow-y: hidden;
-  }
-
-  .Article figure {
-    margin: 2rem 0;
-  }
-
-  .Article figure > figcaption {
-    margin-top: -1rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: var(--subtext-color);
-  }
 `;
