@@ -50,10 +50,6 @@
             "url": "https://github.com/uju-in/lime-frontend"
           },
           {
-            "type": "notion",
-            "url": "https://square-jam-29f.notion.site/Life-Time-7d2747a0361447bfbac3217ef9a3b97a"
-          },
-          {
             "type": "external",
             "url": "https://www.uju-lime.site/"
           }
@@ -100,10 +96,6 @@
         ],
         "links": [
           {
-            "type": "notion",
-            "url": "https://yr1m.notion.site/b37615a0a1d24a3ba7bd4775cd130a62?pvs=4"
-          },
-          {
             "type": "external",
             "url": "https://maplescouter.com/"
           }
@@ -144,10 +136,6 @@
           {
             "type": "github",
             "url": "https://github.com/TeamDogeC-2/StudentSoup"
-          },
-          {
-            "type": "notion",
-            "url": "https://yr1m.notion.site/SFOO-Student-Food-c301bb35acd641e5a53f24bc5161000b?pvs=4"
           }
         ],
         "name": "sfoo",
@@ -176,10 +164,6 @@
           {
             "type": "github",
             "url": "https://github.com/yeeeerim/React_Project/tree/main/youtube"
-          },
-          {
-            "type": "notion",
-            "url": "https://yr1m.notion.site/88e8015f564c46fcba44e1ffbf71c12d?pvs=4"
           }
         ],
         "name": "youtube",
