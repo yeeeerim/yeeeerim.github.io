@@ -27,9 +27,14 @@ const ProjectDetail = ({ title }: { title: string }) => {
   }
 
   useEffect(() => {
-    fetch(`/assets/projects/${data.name}/index.md`)
-      .then((response) => response.text())
-      .then((text) => setMarkdown(text));
+    try {
+      fetch(`/assets/projects/${data.name}/index.md`)
+        .then((response) => response.text())
+        .then((text) => setMarkdown(text));
+    } catch (e) {
+      setMarkdown("");
+      console.error(e);
+    }
   }, []);
 
   return (
