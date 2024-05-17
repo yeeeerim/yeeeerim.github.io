@@ -10,9 +10,9 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
-const DiaryDetailSection = ({ props }: any) => {
+const DiaryDetailSection = ({ title }: { title: string }) => {
   const articles = useArticleData();
-  const article = articles.find((a) => a.slug.includes(props.title));
+  const article = articles.find((a) => a.slug.includes(title));
 
   if (!article) return <div>작성된 글이 없습니다.</div>;
 
@@ -20,14 +20,14 @@ const DiaryDetailSection = ({ props }: any) => {
   const relativeTime = dateNow.from(article.date, true);
 
   return (
-    <DiaryDetailStyled>
+    <>
       <Seo
         title={article.title}
         description={article.description || undefined}
         useTitleTemplate={true}
       />
       <Page>
-        <article className={"Article"}>
+        <DiaryDetailStyled className={"Article"}>
           <div className={"Breadcrumb"}>
             <Link to={"/diary"} title="Back To Article Listing">
               <span className={"BackArrow"}>&#10094;</span>
@@ -74,9 +74,9 @@ const DiaryDetailSection = ({ props }: any) => {
           <section className={"Footer"}>
             <AuthorSnippet />
           </section>
-        </article>
+        </DiaryDetailStyled>
       </Page>
-    </DiaryDetailStyled>
+    </>
   );
 };
 
@@ -99,7 +99,7 @@ function AuthorSnippet(): React.ReactElement {
   );
 }
 
-const DiaryDetailStyled = styled.div`
+const DiaryDetailStyled = styled.article`
   blockquote {
     border-left: 1px;
     border-style: solid;
@@ -149,22 +149,20 @@ const DiaryDetailStyled = styled.div`
     margin-right: 0.25rem;
   }
 
-  .Article {
-    width: 100%;
-    height: 100%;
-    max-width: 740px;
-    margin: 0 auto;
-    padding: var(--page-padding);
-  }
+  width: 100%;
+  height: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: var(--page-padding);
 
-  .Article .Header,
-  .Article .Banner,
-  .Article .Body,
-  .Article .Footer {
+  .Header,
+  .Banner,
+  .Body,
+  .Footer {
     margin-bottom: 3rem;
   }
 
-  .Article .Category {
+  .Category {
     display: block;
     text-transform: uppercase;
     font-size: 0.875rem;
@@ -173,39 +171,39 @@ const DiaryDetailStyled = styled.div`
     color: var(--subtext-color);
   }
 
-  .Article .Details {
+  .Details {
     font-size: 0.875rem;
     letter-spacing: +0.5px;
   }
 
-  .Article .ReadingTime {
+  .ReadingTime {
     margin-left: 0.5rem;
   }
 
-  .Article .ReadingTime::before {
+  .ReadingTime::before {
     content: "–";
     margin-right: 0.5rem;
   }
 
-  .Article .BannerImage {
+  .BannerImage {
     border-radius: var(--border-radius);
     margin-bottom: 0;
   }
 
-  .Article .BannerCaption {
+  .BannerCaption {
     display: block;
     font-size: 0.875rem;
     letter-spacing: +0.5px;
     text-align: center;
   }
 
-  .Article .Body .Content {
+  .Body .Content {
     font-size: 1.125rem;
     line-height: 2rem;
     margin-bottom: 3rem;
   }
 
-  .Article .Body .Keyword {
+  .Body .Keyword {
     font-size: 0.875rem;
     background-color: var(--tertiary-color);
     color: var(--subtext-color);
@@ -214,12 +212,12 @@ const DiaryDetailStyled = styled.div`
     border-radius: 0.5rem;
   }
 
-  .Article .Footer {
+  .Footer {
     border-top: 3px solid var(--tertiary-color);
     padding-top: 3rem;
   }
 
-  .Article img {
+  img {
     max-height: 660px;
     object-fit: cover;
     border-radius: var(--border-radius);
@@ -232,11 +230,11 @@ const DiaryDetailStyled = styled.div`
     overflow-y: hidden;
   }
 
-  .Article figure {
+  figure {
     margin: 2rem 0;
   }
 
-  .Article figure > figcaption {
+  figure > figcaption {
     margin-top: -1rem;
     text-align: center;
     font-size: 0.875rem;

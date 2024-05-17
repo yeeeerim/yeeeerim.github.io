@@ -84,7 +84,7 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
         </a>
       ) : (
         <Link
-          to={props.data.link.replace("diarys", "diary")}
+          to={props.data.link.replace("diarys/", `diary/?title=`)}
           title={props.data.title}
         >
           {articleCard}
