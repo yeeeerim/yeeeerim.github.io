@@ -98,6 +98,7 @@ const ProjectDetail = ({ title }: { title: string }) => {
                 );
             })}
           </Swiper>
+          {data.banners.length > 1 && <sub>👉 좌우로 넘겨주세요</sub>}
         </section>
       )}
 
