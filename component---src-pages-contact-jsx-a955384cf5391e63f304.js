@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_portfolio_minimal_theme=self.webpackChunkgatsby_starter_portfolio_minimal_theme||[]).push([[661],{18797:function(e,t,n){n.r(t);var a=n(67294),l=n(72121),r=n(54694);t.default=function(){return a.createElement(a.Fragment,null,a.createElement(l.pQ,{title:"Contact",useTitleTemplate:!0,noIndex:!0}),a.createElement(r.T,null,a.createElement(l.U0,{sectionId:"github",heading:"Contact"})))}}}]);
+//# sourceMappingURL=component---src-pages-contact-jsx-a955384cf5391e63f304.js.map
