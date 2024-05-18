@@ -66,16 +66,17 @@ const ProjectStyled = styled.div`
 
   .tab-area {
     div {
-      padding: 4px 15px;
+      padding: 4px 8px;
       display: inline;
       font-size: 1.5rem;
       font-weight: 600;
       cursor: pointer;
       color: white;
-      margin-right: 5px;
+      margin-right: 10px;
 
       &.focus {
         color: #f7b000;
+        border-bottom: 2px solid;
       }
     }
   }
