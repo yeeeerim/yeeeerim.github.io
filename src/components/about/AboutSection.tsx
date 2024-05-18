@@ -159,7 +159,7 @@ const AboutStyled = styled.div`
         .line {
           width: 3px;
           height: 360px;
-          background-color: #fbfafa;
+          background-color: #a49b8b;
           margin: 20px 20px 20px 25px;
           @media (max-width: 767px) {
             height: 500px;
@@ -177,10 +177,10 @@ const AboutStyled = styled.div`
               padding: 0 0 36px 0;
               .circle {
                 border-radius: 50%;
-                background-color: #fbfafa;
-                height: 20px;
-                width: 20px;
-                margin: 0 15px 0 16px;
+                background-color: #a49b8b;
+                height: 16px;
+                width: 16px;
+                margin: 0 15px 0 19px;
               }
               .dateAndDesc {
                 display: flex;
