@@ -153,12 +153,17 @@ const AboutStyled = styled.div`
   /* timestamp */
   .timestamp {
     .content {
+      background: rgb(45, 45, 45);
       margin: 30px 0;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      max-width: 765px;
+      padding: 1px 5px;
       .graph {
         position: relative;
         .line {
           width: 3px;
-          height: 360px;
+          height: 300px;
           background-color: #a49b8b;
           margin: 20px 20px 20px 25px;
           @media (max-width: 767px) {
@@ -174,7 +179,7 @@ const AboutStyled = styled.div`
               list-style: none;
               display: flex;
               align-items: center;
-              padding: 0 0 36px 0;
+              padding: 0 0 25px 0;
               .circle {
                 border-radius: 50%;
                 background-color: #a49b8b;
@@ -189,7 +194,10 @@ const AboutStyled = styled.div`
                   width: 300px;
                 }
                 .logo {
-                  margin: 0 10px;
+                  margin: 2px 10px 0 10px;
+                  width: 100px;
+                  align-items: center;
+                  display: flex;
                 }
                 .descAndLogo {
                   display: flex;
