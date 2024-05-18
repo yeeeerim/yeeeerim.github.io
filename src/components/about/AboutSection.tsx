@@ -1,11 +1,27 @@
 import styled from "@emotion/styled";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useLocalDataSource } from "./data";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
+import remarkGfm from "remark-gfm";
 
 const AboutSection = () => {
   const response = useLocalDataSource();
   const data = response.allAboutJson.sections[0];
+  const [markdown, setMarkdown] = useState("");
+
+  useEffect(() => {
+    try {
+      fetch(`/assets/me.md`)
+        .then((response) => response.text())
+        .then((text) => setMarkdown(text));
+    } catch (e) {
+      setMarkdown("");
+      console.error(e);
+    }
+  }, []);
 
   return (
     <AboutStyled>
@@ -20,15 +36,39 @@ const AboutSection = () => {
               alt={data.profile.image.alt || `Profile ${data.profile.name}`}
             />
           )}
-          <div>
-            <ul className="desc">
-              <li>이름 : {data.profile.name}</li>
-              <li>생년월일 : {data.profile.birthday}</li>
-              <li>MBTI : {data.profile.mbti}</li>
-              <li>취미 : {data.profile.hobby}</li>
-              <li>자격증 : {data.profile.cert}</li>
-            </ul>
-          </div>
+          <CodeStyled>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                code({ className, children }) {
+                  const match = /language-(\w+)/.exec(className || "");
+                  return match ? (
+                    <SyntaxHighlighter
+                      style={tomorrow}
+                      language={match[1]}
+                      PreTag="div"
+                    >
+                      {String(children)
+                        .replace(/\n$/, "")
+                        .replace(/\n&nbsp;\n/g, "")
+                        .replace(/\n&nbsp\n/g, "")}
+                    </SyntaxHighlighter>
+                  ) : (
+                    <SyntaxHighlighter
+                      style={tomorrow}
+                      background="green"
+                      language="textile"
+                      PreTag="div"
+                    >
+                      {String(children).replace(/\n$/, "")}
+                    </SyntaxHighlighter>
+                  );
+                },
+              }}
+            >
+              {markdown}
+            </ReactMarkdown>
+          </CodeStyled>
         </div>
       </div>
 
@@ -89,7 +129,9 @@ const AboutStyled = styled.div`
     .content {
       display: flex;
       flex-direction: row;
+      column-gap: 40px;
       margin: 30px 0;
+      align-items: center;
       .img {
         width: 150px;
         height: 150px;
@@ -169,5 +211,13 @@ const AboutStyled = styled.div`
     display: inline;
     font-size: 1.6rem;
     font-weight: 600;
+  }
+`;
+
+const CodeStyled = styled.div`
+  font-size: 0.725rem;
+  div {
+    border-radius: 10px;
+    max-width: 90vw;
   }
 `;
