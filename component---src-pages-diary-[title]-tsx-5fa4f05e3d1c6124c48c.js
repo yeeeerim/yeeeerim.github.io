@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_portfolio_minimal_theme=self.webpackChunkgatsby_starter_portfolio_minimal_theme||[]).push([[100],{5848:function(e,t,a){a.r(t);var l=a(7294),r=a(1590),n=a(2121);t.default=function(e){var t=e.params;return l.createElement(l.Fragment,null,l.createElement(n.pQ,{title:t.title||"Diary",useTitleTemplate:!0,noIndex:!0}),l.createElement(r.Z,{title:t.title}))}}}]);
-//# sourceMappingURL=component---src-pages-diary-[title]-tsx-5fa4f05e3d1c6124c48c.js.map
