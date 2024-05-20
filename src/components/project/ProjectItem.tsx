@@ -5,6 +5,7 @@ import "./project.css";
 import { useMediaQuery } from "gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery";
 import { Icon } from "../Icon";
 import { Project } from "./data";
+import { Link } from "gatsby";
 
 interface ProjectProps {
   data: Project;
@@ -59,8 +60,8 @@ export function ProjectItem(props: ProjectProps): React.ReactElement {
         </div>
       </div>
       {props.data.image.src && props.data.image.linkTo && (
-        <a
-          href={props.data.image.linkTo}
+        <Link
+          to={props.data.image.linkTo}
           rel="noopener noreferrer"
           aria-label="External Link"
         >
@@ -70,7 +71,7 @@ export function ProjectItem(props: ProjectProps): React.ReactElement {
             image={props.data.image.src.childImageSharp.gatsbyImageData}
             alt={props.data.image.alt || `Project ${props.data.title}`}
           />
-        </a>
+        </Link>
       )}
       {props.data.image.src && !props.data.image.linkTo && (
         <GatsbyImage
