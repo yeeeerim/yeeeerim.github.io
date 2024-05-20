@@ -1,27 +1,17 @@
 import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useLocalDataSource } from "./data";
-import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
-import remarkGfm from "remark-gfm";
+import { useMeDataSource } from "./meData";
 
 const AboutSection = () => {
   const response = useLocalDataSource();
+  const markdownData = useMeDataSource();
+  let markdown = "";
+  if (markdownData) {
+    markdown = markdownData.allMarkdownRemark.edges[0].node.html;
+  }
   const data = response.allAboutJson.sections[0];
-  const [markdown, setMarkdown] = useState("");
-
-  useEffect(() => {
-    try {
-      fetch(`/assets/me.md`)
-        .then((response) => response.text())
-        .then((text) => setMarkdown(text));
-    } catch (e) {
-      setMarkdown("");
-      console.error(e);
-    }
-  }, []);
 
   return (
     <AboutStyled>
@@ -37,37 +27,7 @@ const AboutSection = () => {
             />
           )}
           <CodeStyled>
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                code({ className, children }) {
-                  const match = /language-(\w+)/.exec(className || "");
-                  return match ? (
-                    <SyntaxHighlighter
-                      style={tomorrow}
-                      language={match[1]}
-                      PreTag="div"
-                    >
-                      {String(children)
-                        .replace(/\n$/, "")
-                        .replace(/\n&nbsp;\n/g, "")
-                        .replace(/\n&nbsp\n/g, "")}
-                    </SyntaxHighlighter>
-                  ) : (
-                    <SyntaxHighlighter
-                      style={tomorrow}
-                      background="green"
-                      language="textile"
-                      PreTag="div"
-                    >
-                      {String(children).replace(/\n$/, "")}
-                    </SyntaxHighlighter>
-                  );
-                },
-              }}
-            >
-              {markdown}
-            </ReactMarkdown>
+            <div dangerouslySetInnerHTML={{ __html: markdown }} />
           </CodeStyled>
         </div>
       </div>
@@ -157,7 +117,7 @@ const AboutStyled = styled.div`
       margin: 30px 0;
       font-size: 0.9rem;
       border-radius: 10px;
-      max-width: 765px;
+      max-width: 825px;
       padding: 1px 5px;
       .graph {
         position: relative;
@@ -223,9 +183,21 @@ const AboutStyled = styled.div`
 `;
 
 const CodeStyled = styled.div`
-  font-size: 0.725rem;
   div {
     border-radius: 10px;
     max-width: 90vw;
+  }
+  pre {
+    background-color: rgb(45, 45, 45);
+    line-height: 0.9rem;
+  }
+  code {
+    font-size: 0.8rem;
+  }
+  .token.string {
+    color: #95c7ae;
+  }
+  .token.keyword {
+    color: #ae95c7;
   }
 `;

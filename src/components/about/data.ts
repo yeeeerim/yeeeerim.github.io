@@ -23,7 +23,7 @@ interface AboutSectionQueryResult {
 
 export const useLocalDataSource = (): AboutSectionQueryResult => {
   return useStaticQuery(graphql`
-    query MyQuery {
+    query aboutQuery {
       allAboutJson {
         sections: nodes {
           profile {

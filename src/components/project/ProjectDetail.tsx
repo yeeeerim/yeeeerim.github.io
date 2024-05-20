@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import { GatsbyImage } from "gatsby-plugin-image";
-import ReactMarkdown from "react-markdown";
 import { useLocalDataSource } from "../../components/project/data";
 import { CalendarOutlined, LinkOutlined, ToolFilled } from "@ant-design/icons";
 
@@ -12,12 +11,22 @@ import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useProjectDetailDataSource } from "./detailData";
 
 SwiperCore.use([Navigation, Pagination]);
 
 const ProjectDetail = ({ title }: { title: string }) => {
-  const [markdown, setMarkdown] = useState("");
   const response = useLocalDataSource();
+  const info = useProjectDetailDataSource();
+  const markdownData = info.allMarkdownRemark.edges.filter((item) => {
+    return item.node.frontmatter.title === title;
+  })[0];
+  let markdown = "";
+
+  if (markdownData) {
+    markdown = markdownData.node.html;
+  }
+
   const { team, personal } = response.allProjectJson.sections[0].project;
   let data = team.find((item) => item.name === title);
   if (!data) {
@@ -25,17 +34,6 @@ const ProjectDetail = ({ title }: { title: string }) => {
 
     if (!data) return null;
   }
-
-  useEffect(() => {
-    try {
-      fetch(`/assets/projects/${data.name}/index.md`)
-        .then((response) => response.text())
-        .then((text) => setMarkdown(text));
-    } catch (e) {
-      setMarkdown("");
-      console.error(e);
-    }
-  }, []);
 
   return (
     <ProjectDetailStyled className={"Article"}>
@@ -109,7 +107,7 @@ const ProjectDetail = ({ title }: { title: string }) => {
 
       <section className={"Body"}>
         <div className={"Content"}>
-          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <div dangerouslySetInnerHTML={{ __html: markdown }} />
         </div>
       </section>
     </ProjectDetailStyled>

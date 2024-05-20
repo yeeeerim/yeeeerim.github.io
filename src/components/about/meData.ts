@@ -12,10 +12,8 @@ interface MeType {
 
 export const useMeDataSource = (): MeType => {
   return useStaticQuery(graphql`
-    query MyQuery {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { glob: "**/aboutMd/**" } }
-      ) {
+    query meDataQuery {
+      allMarkdownRemark(filter: { fileAbsolutePath: { glob: "**/about/**" } }) {
         edges {
           node {
             html
