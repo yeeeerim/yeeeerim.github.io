@@ -25,6 +25,7 @@ keywords:
 ## 트러블슈팅
 
 - [[Gatsby.js] Trouble Shooting : SSG, SSR, DSG](https://velog.io/@yr1m/Gatsby.js-Trouble-Shooting-SSG-SSR-DSG)
+- [[Gatsby.js] Trouble Shooting : ModuleNotFoundError ...page-data](https://velog.io/@yr1m/Gatsby.js-Trouble-Shooting-ModuleNotFoundError)
 
 ## 회고
 
