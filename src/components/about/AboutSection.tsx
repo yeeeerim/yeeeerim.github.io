@@ -17,15 +17,15 @@ const AboutSection = () => {
     <AboutStyled>
       {/* Profile */}
       <div className="profile">
-        <div className="title">Profile.</div>
+        <div className="title">About</div>
         <div className="content">
-          {data.profile.image.src && (
+          {/* {data.profile.image.src && (
             <GatsbyImage
               className="img"
               image={data.profile.image.src.childImageSharp.gatsbyImageData}
               alt={data.profile.image.alt || `Profile ${data.profile.name}`}
             />
-          )}
+          )} */}
           <CodeStyled>
             <div dangerouslySetInnerHTML={{ __html: markdown }} />
           </CodeStyled>
@@ -34,7 +34,7 @@ const AboutSection = () => {
 
       {/* TimeStamp */}
       <div className="timestamp">
-        <div className="title">Timestamp.</div>
+        <div className="title">Timestamp</div>
         <div className="content">
           <div className="graph">
             <div className="line" />
@@ -82,6 +82,7 @@ const AboutStyled = styled.div`
   margin: 0 auto;
   padding: var(--page-padding);
   justify-content: space-between;
+  color: #aaa;
 
   /* profile */
   .profile {
@@ -113,7 +114,7 @@ const AboutStyled = styled.div`
   /* timestamp */
   .timestamp {
     .content {
-      background: rgb(45, 45, 45);
+      /* background: rgb(45, 45, 45); */
       margin: 30px 0;
       font-size: 0.9rem;
       border-radius: 10px;
@@ -175,7 +176,7 @@ const AboutStyled = styled.div`
 
   /* common */
   .title {
-    color: #f7b000;
+    color: #ddd;
     display: inline;
     font-size: 1.6rem;
     font-weight: 600;
@@ -184,10 +185,10 @@ const AboutStyled = styled.div`
 
 const CodeStyled = styled.div`
   div {
-    border-radius: 10px;
     max-width: 90vw;
   }
   pre {
+    border-radius: 10px;
     background-color: rgb(45, 45, 45);
     line-height: 0.9rem;
   }
@@ -199,5 +200,11 @@ const CodeStyled = styled.div`
   }
   .token.keyword {
     color: #ae95c7;
+  }
+  a {
+    color: #7c96db;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
