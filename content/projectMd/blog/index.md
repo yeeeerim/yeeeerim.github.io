@@ -22,6 +22,10 @@ keywords:
 2. GraphQL 사용 경험
 3. 도메인 구매 및 적용 경험
 
+## 트러블슈팅
+
+- [[Gatsby.js] Trouble Shooting : SSG, SSR, DSG](https://velog.io/@yr1m/Gatsby.js-Trouble-Shooting-SSG-SSR-DSG)
+
 ## 회고
 
 `Notion`, `Tistory`, `Velog` 등 포트폴리오로 사용하는 플랫폼이 많이 존재하지만, 프론트엔드 개발자라면 직접 만든 나만의 포트폴리오 사이트가 있어야겠다는 생각이 들어 제작하게 되었습니다!
