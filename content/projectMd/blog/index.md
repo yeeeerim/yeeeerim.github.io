@@ -1,15 +1,9 @@
 ---
 title: "blog"
-description: "프론트엔드 개발자 첫 번째 회고"
-date: "2023-05-21"
-banner:
-  src: "../../images/diary/diary_bnr_1.png"
-  alt: "First Markdown Post"
-  caption: ""
 categories:
-  - "회고"
+  - "프로젝트"
 keywords:
-  - "회고"
+  - "프로젝트"
 ---
 
 ## 소개
