@@ -10,9 +10,9 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
-const DiaryDetailSection = ({ title }: { title: string }) => {
+const DiaryDetailSection = ({ slug }: { slug: string }) => {
   const articles = useArticleData();
-  const article = articles.find((a) => a.slug.includes(title));
+  const article = articles.find((a) => a.slug === slug);
 
   if (!article) return <div>작성된 글이 없습니다.</div>;
 
