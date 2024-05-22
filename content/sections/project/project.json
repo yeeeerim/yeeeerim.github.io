@@ -144,32 +144,6 @@
     ],
     "personal": [
       {
-        "visible": false,
-        "category": "📍 1-contributor",
-        "title": "YOUTUBE CLONE",
-        "description": "유튜브 사이트와 유사한 기능을 가진 사이트입니다. 회원가입, 비디오 업로드, 구독, 댓글, 좋아요, 싫어요 기능을 사용할 수 있습니다.",
-        "tags": ["React.js", "Node.js", "MONGO DB"],
-        "image": {
-          "src": "../../images/youtube.png",
-          "alt": "youtube_img",
-          "linkTo": "https://yr1m.notion.site/88e8015f564c46fcba44e1ffbf71c12d?pvs=4"
-        },
-        "banners": [
-          {
-            "src": "../../images/youtube.png",
-            "alt": "youtube_img"
-          }
-        ],
-        "links": [
-          {
-            "type": "github",
-            "url": "https://github.com/yeeeerim/React_Project/tree/main/youtube"
-          }
-        ],
-        "name": "youtube",
-        "date": "2022. 02. 10 ~ 2022. 02. 20"
-      },
-      {
         "visible": true,
         "category": "👩🏻‍💻 1-contributor",
         "title": "Gatsby Blog",
