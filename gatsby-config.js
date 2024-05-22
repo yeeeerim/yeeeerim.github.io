@@ -7,8 +7,8 @@ module.exports = {
         siteUrl: "https://yrim.me/", // Used for sitemap generation
         manifestSettings: {
           favicon: "./content/images/favicon-dino.png", // Path is relative to the root
-          siteName: "My Minimal Portfolio", // Used in manifest.json
-          shortName: "Portfolio", // Used in manifest.json
+          siteName: "About Yerim", // Used in manifest.json
+          shortName: "About Yerim", // Used in manifest.json
           startUrl: "/", // Used in manifest.json
           backgroundColor: "#FFFFFF", // Used in manifest.json
           themeColor: "#000000", // Used in manifest.json
