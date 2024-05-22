@@ -125,7 +125,7 @@ const AboutStyled = styled.div`
         .line {
           width: 3px;
           height: 300px;
-          background-color: #a49b8b;
+          background-color: white;
           margin: 20px 20px 20px 25px;
           @media (max-width: 767px) {
             height: 500px;
@@ -143,7 +143,7 @@ const AboutStyled = styled.div`
               padding: 0 0 25px 0;
               .circle {
                 border-radius: 50%;
-                background-color: #a49b8b;
+                background-color: white;
                 height: 16px;
                 width: 16px;
                 margin: 0 15px 0 19px;
@@ -162,6 +162,9 @@ const AboutStyled = styled.div`
                 }
                 .descAndLogo {
                   display: flex;
+                }
+                .desc {
+                  color: white;
                 }
                 @media (max-width: 767px) {
                   flex-direction: column;
@@ -202,9 +205,9 @@ const CodeStyled = styled.div`
     color: #ae95c7;
   }
   a {
-    color: #7c96db;
+    color: white;
+    text-decoration: underline;
     &:hover {
-      text-decoration: underline;
     }
   }
 `;
