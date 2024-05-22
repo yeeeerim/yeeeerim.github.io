@@ -17,14 +17,14 @@
     "logo": { "text": "Y_rim" },
     "navigation": {
       "header": [
-        { "label": "About", "url": "/about" },
-        { "label": "Diary", "url": "/diary" },
-        { "label": "Project", "url": "/project" }
+        { "label": "About", "url": "/about/" },
+        { "label": "Diary", "url": "/diary/" },
+        { "label": "Project", "url": "/project/" }
       ],
       "ctaButton": {
         "openNewTab": false,
         "label": "Contact",
-        "url": "/contact"
+        "url": "/contact/"
       },
       "footer": []
     },
