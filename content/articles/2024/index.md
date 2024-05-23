@@ -36,7 +36,7 @@ keywords:
 
 환산 프로젝트는 꾸준히 개발을 진행한 것은 아니지만, Figma로 직접 디자인하는 작업까지 담당하고 있기 때문에 꽤 많은 시간을 할애한 것 같다.
 
-![img](https://velog.velcdn.com/images/yr1m/post/65797d51-20af-4fee-a9ea-af1b31c7b665/image.png)
+<img src="https://velog.velcdn.com/images/yr1m/post/65797d51-20af-4fee-a9ea-af1b31c7b665/image.png" width="100%" >
 
 처음 이 프로젝트에 합류할 땐 단순히 UI/UX를 개선해 주고 싶은 마음에서 시작하게 되었는데, 이후 넥슨에서 API를 공개하면서 더욱 다양한 기능과 페이지들이 추가되어 아직도 프로젝트에 기여하고 있다.
 
