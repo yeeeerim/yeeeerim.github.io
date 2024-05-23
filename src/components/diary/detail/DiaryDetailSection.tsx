@@ -113,12 +113,15 @@ const DiaryDetailStyled = styled.article`
     background-color: rgba(135, 131, 120, 0.15);
     font-size: 1rem;
     p {
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding: 5px 15px 5px 0;
     }
     ol,
     ul {
       padding: 5px 0px 5px 20px;
+    }
+    a {
+      color: #7c96db;
+      text-decoration: underline;
     }
   }
   .language-text {
