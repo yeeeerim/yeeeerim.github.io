@@ -118,6 +118,15 @@ const DiaryDetailStyled = styled.article`
     ol,
     ul {
       padding: 5px 0px 5px 20px;
+      li {
+        a {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+          margin-bottom: -10px;
+        }
+      }
     }
     a {
       color: #7c96db;
