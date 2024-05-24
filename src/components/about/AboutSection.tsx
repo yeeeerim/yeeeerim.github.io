@@ -124,11 +124,11 @@ const AboutStyled = styled.div`
         position: relative;
         .line {
           width: 3px;
-          height: 300px;
+          height: 350px;
           background-color: white;
           margin: 20px 20px 20px 25px;
           @media (max-width: 767px) {
-            height: 500px;
+            height: 530px;
           }
         }
         .time-line {
