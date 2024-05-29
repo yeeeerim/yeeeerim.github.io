@@ -268,6 +268,7 @@ const ProjectDetailStyled = styled.article`
       color: #eb5757;
       padding: 2px 4px;
       font-size: 0.8rem;
+      border-radius: 4px;
     }
     ol > li::marker {
       color: #009a87;
