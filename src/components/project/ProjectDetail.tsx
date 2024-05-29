@@ -263,7 +263,7 @@ const ProjectDetailStyled = styled.article`
 
   /* MarkDown Style */
   .Content {
-    code {
+    p > code {
       background: rgba(135, 131, 120, 0.15);
       color: #eb5757;
       padding: 2px 4px;
@@ -306,6 +306,11 @@ const ProjectDetailStyled = styled.article`
       ul {
         padding: 5px 0px 5px 20px;
       }
+    }
+
+    deckgo-highlight-code {
+      font-size: 0.8rem;
+      line-height: 20px;
     }
   }
 

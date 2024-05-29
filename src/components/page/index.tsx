@@ -9,6 +9,8 @@ import {
 import { useSiteConfiguration } from "gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration";
 import React from "react";
 import Helmet from "react-helmet";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
 
 interface PageProps {
   children: React.ReactElement;

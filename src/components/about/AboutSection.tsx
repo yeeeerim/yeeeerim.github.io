@@ -190,24 +190,20 @@ const CodeStyled = styled.div`
   div {
     max-width: 90vw;
   }
-  pre {
-    border-radius: 10px;
-    background-color: rgb(45, 45, 45);
-    line-height: 0.9rem;
-  }
+
   code {
     font-size: 0.8rem;
   }
-  .token.string {
-    color: #95c7ae;
-  }
-  .token.keyword {
-    color: #ae95c7;
-  }
+
   a {
     color: white;
     text-decoration: underline;
     &:hover {
     }
+  }
+
+  deckgo-highlight-code {
+    font-size: 0.8rem;
+    line-height: 20px;
   }
 `;
