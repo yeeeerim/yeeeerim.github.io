@@ -36,7 +36,7 @@ keywords:
 
 ## 5. 성능 최적화
 
-- `styled-component에서 tailwind로 변경하여 CSS 로딩 시간을 단축하고, 페이지 렌더링 성능을 개선
+- styled-component에서 tailwind로 변경하여 CSS 로딩 시간을 단축하고, 페이지 렌더링 성능을 개선
 - UI/UX 개선을 통해 사용자 경험을 향상시키고, 모바일 환경에서의 사용성을 개선
 
 ## 6. 회고
