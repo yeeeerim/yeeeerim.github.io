@@ -313,6 +313,21 @@ const ProjectDetailStyled = styled.article`
       font-size: 0.8rem;
       line-height: 20px;
     }
+
+    table {
+      border-radius: 10px;
+      thead {
+        background-color: #484848cc;
+      }
+      td {
+        padding: 0 10px;
+      }
+      tbody {
+        td {
+          background-color: #2c2c2ccc;
+        }
+      }
+    }
   }
 
   /* MarkDown Style */
