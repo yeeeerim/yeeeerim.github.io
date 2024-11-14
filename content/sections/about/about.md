@@ -10,7 +10,7 @@ imageAlt: ""
 
 ```ts
 let about_me = {
-  name: "Yerim Jin",
+  name: "JIN YERIM",
   birthday: "1999.06.09 🐰",
   mbti: "ISFJ",
   major: "Computer Engineering",

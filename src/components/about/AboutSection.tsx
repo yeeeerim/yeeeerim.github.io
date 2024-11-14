@@ -50,13 +50,7 @@ const AboutSection = () => {
                           <div className="desc">{item.desc}</div>
                           <div className="logo">
                             {item.logo && item.logo.src && (
-                              <GatsbyImage
-                                image={
-                                  item.logo.src.childImageSharp
-                                    .gatsbyImageData || ""
-                                }
-                                alt={item.logo.alt || ""}
-                              />
+                              <GatsbyImage image={item.logo.src.childImageSharp.gatsbyImageData || ""} alt={item.logo.alt || ""} />
                             )}
                           </div>
                         </div>
@@ -124,7 +118,7 @@ const AboutStyled = styled.div`
         position: relative;
         .line {
           width: 3px;
-          height: 350px;
+          height: 300px;
           background-color: white;
           margin: 20px 20px 20px 25px;
           @media (max-width: 767px) {
