@@ -6,13 +6,7 @@
         "category": "🍋 6-contributor",
         "title": "LIME: Life Time",
         "description": "취미 아이템 구매를 위한 결정을 도와주는 서비스입니다.",
-        "tags": [
-          "TypeScript",
-          "Tailwind CSS",
-          "Recoil",
-          "Next.js 14",
-          "React-query"
-        ],
+        "tags": ["TypeScript", "Tailwind CSS", "Recoil", "Next.js 14", "React-query"],
         "image": {
           "src": "../../images/lime_img.png",
           "alt": "lime_img",
@@ -144,18 +138,32 @@
     ],
     "personal": [
       {
+        "visible": false,
+        "category": "📅 1-contributor",
+        "title": "Academy Schedular",
+        "description": "학생들의 시간표와 출결정보를 보여주는 학원 사이트입니다.",
+        "tags": ["TypeScript", "React.js", "Next.js 14", "Tailwind CSS", "SWR"],
+        "image": {
+          "src": "../../images/giant_img.png",
+          "alt": "giant_img",
+          "linkTo": "/project/academy-schedular/"
+        },
+        "banners": [
+          {
+            "src": "../../images/giant_img.png",
+            "alt": "giant_img"
+          }
+        ],
+        "links": [{ "type": "external", "url": "https://www.giant-edu.com" }],
+        "name": "academy-schedular",
+        "date": "2024. 09. 28 ~ ing"
+      },
+      {
         "visible": true,
         "category": "👩🏻‍💻 1-contributor",
         "title": "Gatsby Blog",
         "description": "Gatsby 프레임워크를 사용하여 만든 블로그입니다. 소개와 회고, 프로젝트 소개를 담고 있습니다.",
-        "tags": [
-          "JavaScript",
-          "TypeScript",
-          "Gatsby.js",
-          "React.js",
-          "GraphQL",
-          "Styled-Component"
-        ],
+        "tags": ["JavaScript", "TypeScript", "Gatsby.js", "React.js", "GraphQL", "Styled-Component"],
         "image": {
           "src": "../../images/blog_img.png",
           "alt": "blog_img",
