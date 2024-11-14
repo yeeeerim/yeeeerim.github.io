@@ -42,10 +42,6 @@
           {
             "type": "github",
             "url": "https://github.com/uju-in/lime-frontend"
-          },
-          {
-            "type": "external",
-            "url": "https://www.uju-lime.site/"
           }
         ],
         "name": "lime",
@@ -138,7 +134,7 @@
     ],
     "personal": [
       {
-        "visible": false,
+        "visible": true,
         "category": "📅 1-contributor",
         "title": "Academy Schedular",
         "description": "학생들의 시간표와 출결정보를 보여주는 학원 사이트입니다.",
