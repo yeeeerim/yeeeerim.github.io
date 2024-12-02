@@ -4,7 +4,7 @@ imageAlt: ""
 ---
 
 안녕하세요.👋🏼<br>
-2년 차 Front-end 개발자 <span style="color: #fff">진예림</span>입니다.
+3년 차 Front-end 개발자 <span style="color: #fff">진예림</span>입니다.
 
 <br>
 
@@ -15,7 +15,7 @@ let about_me = {
   mbti: "ISFJ",
   major: "Computer Engineering",
   job: "FE developer who wants to grow 🔥",
-  favorite_skills: ["TypeScript", "React.js", "Next.js", "Tailwind", "Recoil"],
+  favorite_skills: ["TypeScript", "React.js", "Next.js", "Tailwind"],
 };
 ```
 
