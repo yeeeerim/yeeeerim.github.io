@@ -86,7 +86,7 @@ export function ArticlesSection(
         <div className="head">{props.heading}</div>
         <Slider additionalClasses={["Articles"]}>
           {articles.length > 0
-            ? articles.slice(0, 3).map((article, key) => {
+            ? articles.map((article, key) => {
                 return <ArticleCard key={key} data={article} />;
               })
             : [...Array(1)].map((_, key) => {
