@@ -210,7 +210,7 @@ const DiaryDetailStyled = styled.article`
   }
 
   .Body .Content {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 2rem;
     margin-bottom: 3rem;
   }
